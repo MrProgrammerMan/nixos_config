@@ -122,6 +122,7 @@
     bitwarden-desktop
     steam
     steam-run
+    vlc
   ];
   
   programs.steam.enable = true;
