@@ -55,6 +55,42 @@
 
   environment.shellAliases = {
     nixdev = "nix develop -i -c bash --norc";
+    nixsw-d = ''
+	cd /etc/nixos &&
+	sudo git add . &&
+	sudo git commit -m "Flake content update(desktop)" || true &&
+	sudo git push &&
+	sudo nixos-rebuild switch --flake .#nixos-desktop
+    '';
+    nixsw-l = ''
+	cd /etc/nixos &&
+	sudo git add . &&
+	sudo git commit -m "Flake content update(laptop)" || true &&
+	sudo git push &&
+	sudo nixos-rebuild switch --flake .#nixos-laptop
+    '';
+    nixup-d = ''
+	cd /etc/nixos &&
+	sudo git add . &&
+	sudo git commit -m "Flake content update(desktop)" || true &&
+	sudo git push &&
+	sudo nix flake update &&
+	sudo git add . &&
+	sudo git commit -m "Flake update(desktop)" || true &&
+	sudo git push &&
+	sudo nixos-rebuild switch --flake .#nixos-desktop
+    '';
+    nixup-l = ''
+	cd /etc/nixos &&
+	sudo git add . &&
+	sudo git commit -m "Flake content update(laptop)" || true &&
+	sudo git push &&
+	sudo nix flake update &&
+	sudo git add . &&
+	sudo git commit -m "Flake update(laptop)" || true &&
+	sudo git push &&
+	sudo nixos-rebuild switch --flake .#nixos-laptop
+    '';
   };
 
   nixpkgs.config.allowUnfree = true;
