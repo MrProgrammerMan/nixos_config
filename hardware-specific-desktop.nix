@@ -8,6 +8,8 @@
   # Hostname
   networking.hostName = "nixos";
 
+  system.stateVersion = "25.05";    
+
   # Enable NVIDIA drivers
   hardware.graphics.enable = true;
   hardware.graphics.enable32Bit = true;
