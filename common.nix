@@ -44,7 +44,8 @@
 
   systemd.services.nixos-flake-update = {
     description = "Pull latest /etc/nixos flake on startup";
-    after = [ "network.target" ];    # make sure network is up
+    after = [ "network-online.target" ];
+    wants = [ "network-online.target" ];
     wantedBy = [ "multi-user.target" ];
     serviceConfig = {
       Type = "oneshot";
