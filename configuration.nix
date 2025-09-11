@@ -2,9 +2,9 @@
 
 {
   imports =
-    [ ./hardware-configuration-desktop-4090.nix
+    [ ./hardware-configuration.nix
       ./common.nix
-      ./hardware-specific.nix
+      ./hardware-specific-desktop-4090.nix
     ];
 
   system.stateVersion = "25.05"; # Set this to your install version
