@@ -2,7 +2,7 @@
 
 {
   imports =
-    [ ./hardware-configuration.nix
+    [ ./hardware-configuration-desktop-4090.nix
       ./common.nix
       ./hardware-specific.nix
     ];
