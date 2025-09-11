@@ -41,6 +41,17 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
+
+  systemd.services.nixos-flake-update = {
+    description = "Pull latest /etc/nixos flake on startup";
+    after = [ "network.target" ];    # make sure network is up
+    wantedBy = [ "multi-user.target" ];
+    serviceConfig = {
+      Type = "oneshot";
+      ExecStart = "${pkgs.git}/bin/git -C /etc/nixos pull";
+      User = "root";                  # run as root since /etc/nixos is root-owned
+    };
+  };
   
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
