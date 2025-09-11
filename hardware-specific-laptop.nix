@@ -6,6 +6,8 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  system.stateVersion = "25.05";
+
   # Hostname for your laptop
   networking.hostName = "nixos-laptop";
 
@@ -19,10 +21,9 @@
   services.xserver.videoDrivers = [ "modesetting" ];
 
   # Touchpad support
-  services.xserver.libinput.enable = true;
+  services.libinput.enable = true;
 
   # Laptop power management
-  services.tlp.enable = true;
   services.thermald.enable = true;
 
   # Optional: battery health tools

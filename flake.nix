@@ -16,7 +16,7 @@
 	];
       };
 
-      nixos-laptop = {self, nixpkgs, ... }: {
+      nixos-laptop = nixpkgs.lib.nixosSystem {
 	system = "x86_64-linux";
 	modules = [
 	  ./common.nix
