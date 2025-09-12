@@ -6,7 +6,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Hostname
-  networking.hostName = "nixos";
+  networking.hostName = "nixos-desktop";
 
   system.stateVersion = "25.05";    
 
