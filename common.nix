@@ -104,6 +104,7 @@
     bitwarden-desktop
     steam
     steam-run
+    firefox
   ];
   
   programs.steam.enable = true;
