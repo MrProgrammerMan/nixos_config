@@ -66,7 +66,7 @@
   };
 
   environment.shellAliases = {
-    nixdev = "nix develop -i -c env PS1="\e[0;35mdev@\W\$ \e[0m" CARGO_TERM_COLOR=always bash --norc -i";
+    nixdev = "nix develop -i -c env PS1=\"\e[0;35mdev@\W\$ \e[0m\" CARGO_TERM_COLOR=always bash --norc -i";
     nixsw = ''
 	cd /etc/nixos &&
 	sudo git add . &&
