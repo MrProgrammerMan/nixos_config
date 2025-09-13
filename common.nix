@@ -1,4 +1,4 @@
-{ config, pkgs, nixpkgs-stable ... }:
+{ config, pkgs, nixpkgs-stable, ... }:
 
 {
   networking.networkmanager.enable = true;
