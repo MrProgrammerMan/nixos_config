@@ -87,7 +87,7 @@
     '';
   };
 
-  pkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with nixpkgs-stable.legacyPackages.x86_64-linux; [
     spotify
