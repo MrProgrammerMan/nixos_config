@@ -88,6 +88,7 @@
   };
 
   nixpkgs.config.allowUnfree = true;
+  nixpkgs-stable.config.allowUnfree = true;
 
   environment.systemPackages = with nixpkgs-stable; [
     spotify
