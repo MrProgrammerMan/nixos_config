@@ -92,20 +92,18 @@
   environment.systemPackages = with pkgs; [
     spotify
     signal-desktop
-    git
     vscode
     discord
-    thunderbird
     brave
     wget
     gimp
     libreoffice
     inkscape
     bitwarden-desktop
-    steam
-    steam-run
-    firefox
   ];
   
   programs.steam.enable = true;
+  programs.git.enable = true;
+  programs.thunderbird.enable = true;
+  programs.firefox.enable = true;  
 }
