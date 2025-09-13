@@ -87,8 +87,6 @@
     '';
   };
 
-  nixpkgs.config.allowUnfree = true;
-
   environment.systemPackages = with pkgs-stable; [
     spotify
     signal-desktop
