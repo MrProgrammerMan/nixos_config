@@ -105,7 +105,7 @@
   programs.firefox.enable = true;
   programs.vscode = {
     enable = true;
-    extensions = [
+    extensions = with pkgs.vscode-extensions; [
       rust-lang.rust-analyzer
     ];
   };
