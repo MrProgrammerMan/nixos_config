@@ -97,6 +97,8 @@
     libreoffice
     inkscape
     bitwarden-desktop
+    cargo
+    rustc
   ];
   
   programs.steam.enable = true;
