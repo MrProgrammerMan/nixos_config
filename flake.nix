@@ -16,7 +16,7 @@
 	  ./hardware-configuration-desktop.nix
 	];
 	specialArgs = {
-	  nixpkgs-stable = nixpkgs-stable.legacyPackages.x86_64-linux;
+	  inherit nixpkgs-stable;
 	};
       };
 
@@ -28,7 +28,7 @@
 	  ./hardware-configuration-laptop.nix
 	];
 	specialArgs = {
-	  nixpkgs-stable = nixpkgs-stable.legacyPackages.x86_64-linux;
+	  inherit nixpkgs-stable;
 	};
       };
     };

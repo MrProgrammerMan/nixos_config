@@ -60,7 +60,7 @@
     isNormalUser = true;
     description = "Jonas Hazeland Baugerud";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with nixpkgs-stable; [
+    packages = with nixpkgs-stable.legacyPackages.x86_64-linux; [
       zettlr
     ];
   };
@@ -90,7 +90,7 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs-stable.config.allowUnfree = true;
 
-  environment.systemPackages = with nixpkgs-stable; [
+  environment.systemPackages = with nixpkgs-stable.legacyPackages.x86_64-linux; [
     spotify
     signal-desktop
     discord
