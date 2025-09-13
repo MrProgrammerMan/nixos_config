@@ -19,7 +19,6 @@
       inherit system;
       config = { allowUnfree = true; };
     }; 
-  };
   in {
     nixosConfigurations = {
       nixos-desktop = nixpkgs-unstable.lib.nixosSystem {
