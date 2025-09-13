@@ -99,6 +99,7 @@
     bitwarden-desktop
     cargo
     rustc
+    gcc
   ];
   
   programs.steam.enable = true;
