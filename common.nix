@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, nixpkgs-stable ... }:
 
 {
   networking.networkmanager.enable = true;
@@ -89,10 +89,9 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with nixpkgs-stable; [
     spotify
     signal-desktop
-    vscode
     discord
     brave
     wget
@@ -105,5 +104,6 @@
   programs.steam.enable = true;
   programs.git.enable = true;
   programs.thunderbird.enable = true;
-  programs.firefox.enable = true;  
+  programs.firefox.enable = true;
+  programs.vscode.enable = true;
 }
