@@ -60,7 +60,7 @@
     isNormalUser = true;
     description = "Jonas Hazeland Baugerud";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
+    packages = with nixpkgs-stable; [
       zettlr
     ];
   };

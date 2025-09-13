@@ -6,7 +6,7 @@
     nixpkgs-unstable = { url = "github:NixOS/nixpkgs/nixos-unstable"; };
   };
   
-  outputs = inputs@{ self, nixpkgs-stable, nixpkgs-unstable, ... }: {
+  outputs = inputs@{ self, nixpkgs-unstable, nixpkgs-stable, ... }: {
     nixosConfigurations = {
       nixos-desktop = nixpkgs-unstable.lib.nixosSystem {
         system = "x86_64-linux";
@@ -16,7 +16,7 @@
 	  ./hardware-configuration-desktop.nix
 	];
 	specialArgs = {
-	  inherit nixpkgs-stable;
+	  nixpkgs-stable = nixpkgs-stable.legacyPackages.x86_64-linux;
 	};
       };
 
@@ -28,7 +28,7 @@
 	  ./hardware-configuration-laptop.nix
 	];
 	specialArgs = {
-	  inherit nixpkgs-stable;
+	  nixpkgs-stable = nixpkgs-stable.legacyPackages.x86_64-linux;
 	};
       };
     };
