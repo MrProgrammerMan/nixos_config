@@ -6,7 +6,7 @@
     nixpkgs-unstable = { url = "github:NixOS/nixpkgs/nixos-unstable"; };
   };
   
-  outputs = inputs@{ self, nixpkgs-stable, nixpkgs-unstable ... }: {
+  outputs = inputs@{ self, nixpkgs-stable, nixpkgs-unstable, ... }: {
     nixosConfigurations = {
       nixos-desktop = nixpkgs-unstable.lib.nixosSystem {
         system = "x86_64-linux";
