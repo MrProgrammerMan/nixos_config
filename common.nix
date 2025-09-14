@@ -100,9 +100,12 @@
     cargo
     rustc
     gcc
+    mangohud
   ];
   
   programs.steam.enable = true;
+  programs.steam.gamescopeSession.enable = true;
+  programs.gamemode.enable = true;
   programs.git.enable = true;
   programs.thunderbird.enable = true;
   programs.firefox.enable = true;
