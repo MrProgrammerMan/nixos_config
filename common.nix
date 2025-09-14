@@ -110,6 +110,7 @@
     enable = true;
     extensions = with pkgs.vscode-extensions; [
       rust-lang.rust-analyzer
+      ms-vscode.live-server
     ];
   };
 }
