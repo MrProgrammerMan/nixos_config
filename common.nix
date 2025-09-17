@@ -101,7 +101,7 @@
     rustc
     gcc
     mangohud
-    vlc
+    idea-ultimate
   ];
   
   programs.steam.enable = true;
