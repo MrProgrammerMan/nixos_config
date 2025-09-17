@@ -101,7 +101,7 @@
     rustc
     gcc
     mangohud
-    idea-ultimate
+    jetbrains.idea-ultimate
   ];
   
   programs.steam.enable = true;
