@@ -101,6 +101,7 @@
     rustc
     gcc
     mangohud
+    vlc
   ];
   
   programs.steam.enable = true;
