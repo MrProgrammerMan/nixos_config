@@ -133,8 +133,8 @@
     enable = true;
     package = pkgs-stable.neovim-unwrapped.overrideAttrs (oldAttrs: rec {
       buildInputs = oldAttrs.buildInputs or [] ++ [
-        pkgs-stable.lua
-        pkgs-stable.lpeg
+        pkgs-stable.lua5.4
+        pkgs-stable.lua5.4-lpeg
       ];
     });
     configure = {
