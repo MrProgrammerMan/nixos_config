@@ -131,8 +131,11 @@
   };
   programs.neovim = {
     enable = true;
-    package = pkgs-stable.neovim-unwrapped.override {
-      lua = pkgs-stable.lua;
+    package = pkgs-stable.neovim-unwrapped.overrideAttrs (oldAttrs: rec {
+      buildInputs = oldAttrs.buildInputs or [] ++ [
+        pkgs-stable.lua
+        pkgs-stable.lpeg
+      ];
     };
     configure = {
       packages.myVimPackage = with pkgs-stable.vimPlugins; {
