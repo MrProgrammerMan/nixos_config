@@ -101,7 +101,6 @@
     rustc
     gcc
     mangohud
-    jetbrains.idea-ultimate
   ];
   
   programs.steam = {
