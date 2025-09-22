@@ -136,7 +136,7 @@
         pkgs-stable.lua
         pkgs-stable.lpeg
       ];
-    };
+    });
     configure = {
       packages.myVimPackage = with pkgs-stable.vimPlugins; {
 	start = [
