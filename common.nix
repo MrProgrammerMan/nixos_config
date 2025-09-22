@@ -117,4 +117,5 @@
       ms-vscode.live-server
     ];
   };
+  programs.neovim.enable = true;
 }
