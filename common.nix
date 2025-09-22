@@ -104,12 +104,24 @@
     jetbrains.idea-ultimate
   ];
   
-  programs.steam.enable = true;
-  programs.steam.gamescopeSession.enable = true;
+  programs.steam = {
+    enable = true;
+    gamescopeSession.enable = true;
+    package = pkgs-stable.steam;
+  };
   programs.gamemode.enable = true;
-  programs.git.enable = true;
-  programs.thunderbird.enable = true;
-  programs.firefox.enable = true;
+  programs.git = {
+    enable = true;
+    package = pkgs-stable.git;
+  };
+  programs.thunderbird = {
+    enable = true;
+    package = pkgs-stable.thunderbird;
+  };
+  programs.firefox = {
+    enable = true;
+    package = pkgs-stable.firefox;
+  };
   programs.vscode = {
     enable = true;
     extensions = with pkgs.vscode-extensions; [
@@ -117,6 +129,29 @@
       ms-vscode.live-server
     ];
   };
-  programs.neovim.enable = true;
-  programs.hyprland.enable = true;
+  programs.neovim = {
+    enable = true;
+    package = pkgs-stable.neovim;
+    plugins = with pkgs-stable.vimPlugins; [
+      lazy-nvim
+      telescope-nvim
+      neo-tree-nvim
+      which-key-nvim
+      nvim-treesitter
+      comment-nvim
+      nvim-autopairs
+      gitsigns-nvim
+      lualine-nvim
+      bufferline-nvim
+      catppuccin-nvim
+      nvim-lspconfig
+      nvim-cmp
+      cmp-nvim-lsp
+      cmp-buffer
+      cmp-path
+      luasnip
+      cmp_luasnip
+    ];
+  };
+  programs.hyprland;
 }
