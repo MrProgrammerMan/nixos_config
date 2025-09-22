@@ -131,9 +131,11 @@
   };
   programs.neovim = {
     enable = true;
-    package = pkgs.neovim;
+    package = pkgs-stable.neovim-unwrapped.override {
+      lua = pkgs-stable.lua;
+    };
     configure = {
-      packages.myVimPackage = with pkgs.vimPlugins; {
+      packages.myVimPackage = with pkgs-stable.vimPlugins; {
 	start = [
 	  lazy-nvim
 	  telescope-nvim
