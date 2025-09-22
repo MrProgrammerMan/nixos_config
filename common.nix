@@ -153,5 +153,4 @@
       cmp_luasnip
     ];
   };
-  programs.hyprland;
 }
