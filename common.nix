@@ -132,25 +132,27 @@
   programs.neovim = {
     enable = true;
     package = pkgs-stable.neovim;
-    plugins = with pkgs-stable.vimPlugins; [
-      lazy-nvim
-      telescope-nvim
-      neo-tree-nvim
-      which-key-nvim
-      nvim-treesitter
-      comment-nvim
-      nvim-autopairs
-      gitsigns-nvim
-      lualine-nvim
-      bufferline-nvim
-      catppuccin-nvim
-      nvim-lspconfig
-      nvim-cmp
-      cmp-nvim-lsp
-      cmp-buffer
-      cmp-path
-      luasnip
-      cmp_luasnip
-    ];
+    configure.packages.config = {
+      start = [
+	lazy-nvim
+	telescope-nvim
+	neo-tree-nvim
+	which-key-nvim
+	nvim-treesitter
+	comment-nvim
+	nvim-autopairs
+	gitsigns-nvim
+	lualine-nvim
+	bufferline-nvim
+	catppuccin-nvim
+	nvim-lspconfig
+	nvim-cmp
+	cmp-nvim-lsp
+	cmp-buffer
+	cmp-path
+	luasnip
+	cmp_luasnip
+      ];
+    };
   };
 }
