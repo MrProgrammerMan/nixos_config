@@ -133,7 +133,7 @@
     enable = true;
     package = pkgs-stable.neovim;
     configure = {
-      packages.myVimPackage = with pkgs.vimPlugins; {
+      packages.myVimPackage = with pkgs-stable.vimPlugins; {
 	start = [
 	  lazy-nvim
 	  telescope-nvim
