@@ -118,4 +118,5 @@
     ];
   };
   programs.neovim.enable = true;
+  programs.hyprland.enable = true;
 }
