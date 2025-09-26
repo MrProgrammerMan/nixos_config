@@ -63,6 +63,8 @@
     packages = with pkgs-stable; [
       zettlr
     ];
+    subUidRanges = [{ startUid = 100000; count = 65536; }];
+    subGidRanges = [{ startGid = 100000; count = 65536; }];
   };
 
   environment.shellAliases = {
@@ -160,9 +162,5 @@
         ];
       };
     };
-  };
-  virtualisation.podman = {
-    enable = true;
-    package = pkgs-stable.podman;
   };
 }
