@@ -161,4 +161,8 @@
       };
     };
   };
+  virtualisation.podman = {
+    enable = true;
+    package = pkgs-stable.podman;
+  }
 }
