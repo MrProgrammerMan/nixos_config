@@ -103,6 +103,7 @@
     rustc
     gcc
     mangohud
+    devenv
   ];
   
   programs.steam = {
