@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs-stable = { url = "github:NixOS/nixpkgs/nixos-25.05"; };
     nixpkgs-unstable = { url = "github:NixOS/nixpkgs/nixos-unstable"; };
-    betafpv-configurator = { url = "path:./betafpv-configurator" };
+    betafpv-configurator = { url = "path:./betafpv-configurator"; };
   };
   
   outputs = inputs@{ self, nixpkgs-unstable, nixpkgs-stable, ... }:
