@@ -104,6 +104,7 @@
     gcc
     mangohud
     devenv
+    (import ./betafpv-configurator.nix { inherit pkgs-unstable system; })
   ];
   
   programs.steam = {

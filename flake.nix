@@ -4,7 +4,6 @@
   inputs = {
     nixpkgs-stable = { url = "github:NixOS/nixpkgs/nixos-25.05"; };
     nixpkgs-unstable = { url = "github:NixOS/nixpkgs/nixos-unstable"; };
-    betafpv-configurator = { url = "path:./betafpv-configurator"; };
   };
   
   outputs = inputs@{ self, nixpkgs-unstable, nixpkgs-stable, betafpv-configurator, ... }:
@@ -29,11 +28,6 @@
           ./common.nix
           ./hardware-specific-desktop.nix
           ./hardware-configuration-desktop.nix
-	  {
-	    environment.systemPackages = with pkgs-stable; [
-              betafpv-configurator.packages.${system}.default
-            ];
-	  }
         ];
         specialArgs = {
           inherit pkgs-stable;
