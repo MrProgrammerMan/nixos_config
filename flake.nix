@@ -6,7 +6,7 @@
     nixpkgs-unstable = { url = "github:NixOS/nixpkgs/nixos-unstable"; };
   };
   
-  outputs = inputs@{ self, nixpkgs-unstable, nixpkgs-stable, betafpv-configurator, ... }:
+  outputs = inputs@{ self, nixpkgs-unstable, nixpkgs-stable, ... }:
   let
     system = "x86_64-linux";
     
