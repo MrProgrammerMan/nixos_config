@@ -30,7 +30,7 @@
           ./hardware-specific-desktop.nix
           ./hardware-configuration-desktop.nix
 	  {
-	    environment.systemPackages = with pkgs; [
+	    environment.systemPackages = with pkgs-stable; [
               betafpv-configurator.packages.${system}.default
             ];
 	  }
