@@ -7,7 +7,7 @@
     betafpv-configurator = { url = "path:./betafpv-configurator"; };
   };
   
-  outputs = inputs@{ self, nixpkgs-unstable, nixpkgs-stable, ... }:
+  outputs = inputs@{ self, nixpkgs-unstable, nixpkgs-stable, betafpv-configurator, ... }:
   let
     system = "x86_64-linux";
     
