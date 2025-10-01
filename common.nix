@@ -42,6 +42,8 @@
     pulse.enable = true;
   };
 
+  hardware.xone.enable = true;
+
   systemd.services.nixos-flake-update = {
     description = "Pull latest /etc/nixos flake on startup";
     after = [ "network-online.target" ];
@@ -103,7 +105,6 @@
     rustc
     gcc
     mangohud
-    xone
   ];
   
   programs.steam = {
