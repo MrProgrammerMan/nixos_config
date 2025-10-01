@@ -103,6 +103,7 @@
     rustc
     gcc
     mangohud
+    xone
   ];
   
   programs.steam = {
