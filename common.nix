@@ -105,7 +105,7 @@
     rustc
     gcc
     mangohud
-    gnome-multi-writer
+    woeusb
   ];
   
   programs.steam = {
