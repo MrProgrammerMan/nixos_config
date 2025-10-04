@@ -90,6 +90,7 @@
   };
 
   environment.systemPackages = with pkgs-stable; [
+    pkgs.spotify
     signal-desktop
     discord
     brave
@@ -159,21 +160,6 @@
 	  luasnip
 	  cmp_luasnip
         ];
-      };
-    };
-  };
-
-  services.spotifyd = {
-    enable = true;
-    settings = {
-      global = {
-        device_name = "nixos-speaker";   # Shown in Spotify Connect
-        device_type = "speaker";         # Best match for stationary setups
-        backend = "alsa";                # Most reliable audio backend
-        volume_controller = "alsa";      # Hardware volume control
-        bitrate = 320;                   # Highest quality
-        volume_normalisation = true;     # Smooth listening experience
-        use_mpris = false;               # Disable, since it's headless
       };
     };
   };
