@@ -90,7 +90,6 @@
   };
 
   environment.systemPackages = with pkgs-stable; [
-    spotifyd
     signal-desktop
     discord
     brave
@@ -162,5 +161,10 @@
         ];
       };
     };
+  };
+
+  services.spotifyd = {
+    enable = true;
+    package = pkgs-stable.spotifyd;
   };
 }
