@@ -165,6 +165,5 @@
 
   services.spotifyd = {
     enable = true;
-    package = pkgs-stable.spotifyd;
   };
 }
