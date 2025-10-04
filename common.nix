@@ -65,8 +65,6 @@
     packages = with pkgs-stable; [
       zettlr
     ];
-    subUidRanges = [{ startUid = 100000; count = 65536; }];
-    subGidRanges = [{ startGid = 100000; count = 65536; }];
   };
 
   environment.shellAliases = {
@@ -92,7 +90,7 @@
   };
 
   environment.systemPackages = with pkgs-stable; [
-    spotify
+    nuclear
     signal-desktop
     discord
     brave
@@ -105,7 +103,6 @@
     rustc
     gcc
     mangohud
-    gnome-multi-writer
   ];
   
   programs.steam = {
