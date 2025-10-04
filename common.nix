@@ -90,7 +90,7 @@
   };
 
   environment.systemPackages = with pkgs-stable; [
-    nuclear
+    spotube
     signal-desktop
     discord
     brave
