@@ -90,7 +90,7 @@
   };
 
   environment.systemPackages = with pkgs-stable; [
-    pkgs-unstable.spotube
+    pkgs.spotube
     signal-desktop
     discord
     brave
