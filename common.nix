@@ -107,7 +107,7 @@
     rustc
     gcc
     mangohud
-    sweet-nova
+    sweet-kde
   ];
   
   programs.steam = {
