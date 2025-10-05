@@ -29,17 +29,17 @@
   };
 
   programs.dconf.enable = true;
-  programs.dconf.profiles = {
-    user = {
-      databases = [{
-        lockAll = false;
-        settings = {
-          "org/gnome/desktop/interface" = {
-            icon-theme = "Adwaita";
-          };
+  programs.dconf.profiles.user = {
+    databases = [{
+      lockAll = true;
+      settings = {
+        "org/gnome/desktop/interface" = {
+          icon-theme = "Adwaita";
+	  color-scheme = "prefer-dark";
+          clock-format = "24h";
         };
-      }];
-    };
+      };
+    }];
   };
 
   console.keyMap = "no";
@@ -116,7 +116,7 @@
     cargo
     rustc
     mangohud
-    gnome.adwaita-icon-theme
+    adwaita-icon-theme
   ];
   
   programs.steam = {
