@@ -28,6 +28,20 @@
     variant = "";
   };
 
+  programs.dconf.enable = true;
+  programs.dconf.profiles = {
+    user = {
+      databases = [{
+        lockAll = false;
+        settings = {
+          "org/gnome/desktop/interface" = {
+            icon-theme = "Adwaita";
+          };
+        };
+      }];
+    };
+  };
+
   console.keyMap = "no";
 
   services.printing.enable = true;
