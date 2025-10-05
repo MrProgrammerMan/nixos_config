@@ -20,11 +20,6 @@
   };
   
   services.xserver.enable = true;
-  services.xserver = {
-    xcursor = {
-      theme = "Adwaita";
-    };
-  };
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
 
