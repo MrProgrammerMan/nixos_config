@@ -103,7 +103,6 @@
     rustc
     gcc
     mangohud
-    sweet-kde
   ];
   
   programs.steam = {
