@@ -29,15 +29,14 @@
   };
 
   programs.dconf.enable = true;
-  programs.dconf.profiles.user = {
-    databases = [{
-      lockAll = true;
-      settings = {
-        "org/gnome/desktop/interface" = {
-          icon-theme = "Adwaita";
-	  color-scheme = "prefer-dark";
-          clock-format = "24h";
-        };
+  programs.dconf.profiles.user.databases = [{
+    settings = {
+      "org/gnome/desktop/interface" = {
+        icon-theme = "Adwaita";
+	cursor-theme = "Adwaita";
+	gtk-theme = "Adwaita";
+	color-scheme = "prefer-dark";
+        clock-format = "24h";
       };
     }];
   };
