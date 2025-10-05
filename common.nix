@@ -116,7 +116,7 @@
     cargo
     rustc
     mangohud
-    adwaita-icon-theme
+    gnome.adwaita-icon-theme
   ];
   
   programs.steam = {
