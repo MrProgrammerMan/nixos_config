@@ -101,7 +101,6 @@
     bitwarden-desktop
     cargo
     rustc
-    gcc
     mangohud
   ];
   
@@ -129,38 +128,5 @@
       rust-lang.rust-analyzer
       ms-vscode.live-server
     ];
-  };
-  programs.neovim = {
-    enable = true;
-    package = pkgs-stable.neovim-unwrapped.overrideAttrs (oldAttrs: rec {
-      buildInputs = oldAttrs.buildInputs or [] ++ [
-        pkgs-stable.lua5_4_compat
-        pkgs-stable.lua54Packages.lpeg
-      ];
-    });
-    configure = {
-      packages.myVimPackage = with pkgs-stable.vimPlugins; {
-	start = [
-	  lazy-nvim
-	  telescope-nvim
-	  neo-tree-nvim
-	  which-key-nvim
-	  nvim-treesitter
-	  comment-nvim
-	  nvim-autopairs
-	  gitsigns-nvim
-	  lualine-nvim
- 	  bufferline-nvim
-	  catppuccin-nvim
-	  nvim-lspconfig
-	  nvim-cmp
-	  cmp-nvim-lsp
-	  cmp-buffer
-	  cmp-path
-	  luasnip
-	  cmp_luasnip
-        ];
-      };
-    };
   };
 }
