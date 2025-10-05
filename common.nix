@@ -38,8 +38,8 @@
 	color-scheme = "prefer-dark";
         clock-format = "24h";
       };
-    }];
-  };
+    };
+  }];
 
   console.keyMap = "no";
 
