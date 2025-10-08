@@ -116,6 +116,7 @@
     rustc
     mangohud
     adwaita-icon-theme
+    processing
   ];
   
   programs.steam = {
