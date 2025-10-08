@@ -116,7 +116,7 @@
     rustc
     mangohud
     adwaita-icon-theme
-    vlc
+    godot
   ];
   
   programs.steam = {
