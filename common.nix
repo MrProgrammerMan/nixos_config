@@ -116,7 +116,6 @@
     rustc
     mangohud
     adwaita-icon-theme
-    godot
   ];
   
   programs.steam = {
