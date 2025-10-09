@@ -117,7 +117,7 @@
     mangohud
     adwaita-icon-theme
     processing
-    idea
+    jetbrains.idea-ultimate
   ];
   
   programs.steam = {
