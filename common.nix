@@ -118,6 +118,7 @@
     adwaita-icon-theme
     processing
     jetbrains.idea-ultimate
+    gnome-multi-writer
   ];
   
   programs.steam = {
