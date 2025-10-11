@@ -17,8 +17,6 @@
     enable32Bit = true;
   };
 
-  hardware.opengl.enable = true;
-
   # If Intel/AMD GPU (most laptops):
   services.xserver.videoDrivers = [ "modesetting" ];
 
