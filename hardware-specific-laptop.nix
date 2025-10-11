@@ -15,7 +15,7 @@
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
-    extraPackages = [ intel-media-driver ];
+    extraPackages = with pkgs; [ intel-media-driver ];
   };
 
   # If Intel/AMD GPU (most laptops):
