@@ -146,4 +146,5 @@
       ms-vscode.live-server
     ];
   };
+  programs.chromium.enable = true;
 }
