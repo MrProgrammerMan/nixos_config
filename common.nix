@@ -117,8 +117,6 @@
     mangohud
     adwaita-icon-theme
     processing
-    jetbrains.idea-ultimate
-    gnome-multi-writer
   ];
   
   programs.steam = {
@@ -144,6 +142,8 @@
     extensions = with pkgs.vscode-extensions; [
       rust-lang.rust-analyzer
       ms-vscode.live-server
+      jnoortheen.nix-ide
+      asvetliakov.vscode-neovim
     ];
   };
 }
