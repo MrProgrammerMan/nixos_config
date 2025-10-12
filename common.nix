@@ -146,4 +146,5 @@
       asvetliakov.vscode-neovim
     ];
   };
+  programs.chromium.enable = true;
 }
