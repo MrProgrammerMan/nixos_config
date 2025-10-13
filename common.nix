@@ -117,6 +117,7 @@
     mangohud
     adwaita-icon-theme
     processing
+    jdk
   ];
   
   programs.steam = {
