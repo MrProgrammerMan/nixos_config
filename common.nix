@@ -1,4 +1,4 @@
-{ config, pkgs, pkgs-stable, nvf, ... }:
+{ config, pkgs, pkgs-stable, ... }:
 
 {
   networking.networkmanager.enable = true;
@@ -151,7 +151,7 @@
     settings = {
       vim.autocomplete.nvim-cmp.enable = true;
       vim.autocomplete.nvim-cmp.sourcePlugins = [
-	"cmp-nvim-lsp", "cmp-buffer", "cmp-path", "cmp-luasnip", "rustaceanvim", "crates-nvim", "nix-develop-nvim", "haskell-tools-nvim"
+	"cmp-nvim-lsp" "cmp-buffer" "cmp-path" "cmp-luasnip" "rustaceanvim" "crates-nvim" "nix-develop-nvim" "haskell-tools-nvim"
       ];
       vim.autopairs.nvim-autopairs.enable = true;
       vim.binds.cheatsheet.enable = true;
