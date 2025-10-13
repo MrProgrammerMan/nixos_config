@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs-stable = { url = "github:NixOS/nixpkgs/nixos-25.05"; };
     nixpkgs-unstable = { url = "github:NixOS/nixpkgs/nixos-unstable"; };
+    nvf.url = "github:notashelf/nvf";
   };
   
   outputs = inputs@{ self, nixpkgs-unstable, nixpkgs-stable, ... }:
@@ -28,6 +29,7 @@
           ./common.nix
           ./hardware-specific-desktop.nix
           ./hardware-configuration-desktop.nix
+	  nvf.nixosModules.default
         ];
         specialArgs = {
           inherit pkgs-stable;
@@ -41,6 +43,7 @@
           ./common.nix
           ./hardware-specific-laptop.nix
           ./hardware-configuration-laptop.nix
+	  nvf.nixosModules.default
         ];
         specialArgs = {
           inherit pkgs-stable;
