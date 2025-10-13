@@ -1,4 +1,4 @@
-{ config, pkgs, pkgs-stable, ... }:
+{ config, pkgs, pkgs-stable, nvf, ... }:
 
 {
   networking.networkmanager.enable = true;
