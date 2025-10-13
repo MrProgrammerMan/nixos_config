@@ -144,6 +144,7 @@
       ms-vscode.live-server
       jnoortheen.nix-ide
       asvetliakov.vscode-neovim
+      redhat.java
     ];
   };
   programs.nvf = {
