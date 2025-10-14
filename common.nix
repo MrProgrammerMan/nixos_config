@@ -19,6 +19,11 @@
     LC_TIME = "nb_NO.UTF-8";
   };
   
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+  };  
+  
   services.xserver.enable = true;
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
