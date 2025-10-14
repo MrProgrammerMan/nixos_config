@@ -146,8 +146,9 @@
       jnoortheen.nix-ide
       asvetliakov.vscode-neovim
       vscjava.vscode-java-pack
+      vscjava.vscode-java-debug
     ];
-    package = pkgs-stable.vscode-fhs;
+    package = pkgs-stable.vscode;
   };
   programs.nvf = {
     enable = true;
