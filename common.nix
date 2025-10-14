@@ -147,6 +147,7 @@
       asvetliakov.vscode-neovim
       vscjava.vscode-java-pack
     ];
+    package = pkgs-stable.vscode-fhs;
   };
   programs.nvf = {
     enable = true;
