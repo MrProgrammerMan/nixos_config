@@ -27,6 +27,10 @@
     layout = "no";
     variant = "";
   };
+  
+  home.sessionVariables =
+    NIXOS_OZONE_WL = "1";
+  };
 
   programs.dconf.enable = true;
   programs.dconf.profiles.user.databases = [{
