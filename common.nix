@@ -147,6 +147,7 @@
       asvetliakov.vscode-neovim
       vscjava.vscode-java-pack
       vscjava.vscode-java-debug
+      redhat.java
     ];
     package = pkgs-stable.vscode;
   };
