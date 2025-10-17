@@ -34,7 +34,7 @@
 	  nvf.nixosModules.default
         ];
         specialArgs = {
-          inherit pkgs-stable;
+          inherit pkgs-stable spotify-password;
         };
       };
 
@@ -48,7 +48,7 @@
 	  nvf.nixosModules.default
         ];
         specialArgs = {
-          inherit pkgs-stable;
+          inherit pkgs-stable spotify-password;
         };
       };
     };
