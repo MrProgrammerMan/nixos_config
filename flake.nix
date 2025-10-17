@@ -5,7 +5,7 @@
     nixpkgs-stable = { url = "github:NixOS/nixpkgs/nixos-25.05"; };
     nixpkgs-unstable = { url = "github:NixOS/nixpkgs/nixos-unstable"; };
     nvf.url = "github:notashelf/nvf";
-    spotify-password = builtins.readFile "./spotify-password";
+    spotify-password = builtins.readFile "./spotify-password.txt";
   };
   
   outputs = inputs@{ self, nixpkgs-unstable, nixpkgs-stable, nvf, spotify-password, ... }:
