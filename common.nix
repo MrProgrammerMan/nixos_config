@@ -111,6 +111,7 @@
 
   environment.systemPackages = with pkgs-stable; [
     spotify-qt
+    librespot
     signal-desktop
     discord
     brave
