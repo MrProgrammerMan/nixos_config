@@ -7,7 +7,7 @@
     nvf.url = "github:notashelf/nvf";
   };
   
-  outputs = inputs@{ self, nixpkgs-unstable, nixpkgs-stable, nvf, spotify-password, ... }:
+  outputs = inputs@{ self, nixpkgs-unstable, nixpkgs-stable, nvf, ... }:
   let
     system = "x86_64-linux";
     
