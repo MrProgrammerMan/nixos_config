@@ -110,7 +110,7 @@
   };
 
   environment.systemPackages = with pkgs-stable; [
-    spotifywm
+    spotify-qt
     signal-desktop
     discord
     brave
