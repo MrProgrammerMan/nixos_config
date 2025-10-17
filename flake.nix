@@ -21,7 +21,7 @@
       config = { allowUnfree = true; };
     };
 
-    spotifyPassword = builtins.readFile ./spotify-password.txt;
+    spotify-password = builtins.readFile ./spotify-password.txt;
   in {
     nixosConfigurations = {
       nixos-desktop = nixpkgs-unstable.lib.nixosSystem {
