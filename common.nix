@@ -110,8 +110,6 @@
   };
 
   environment.systemPackages = with pkgs-stable; [
-    spotify-qt
-    librespot
     signal-desktop
     discord
     brave
@@ -179,6 +177,14 @@
       vim.telescope.enable = true;
       vim.git.vim-fugitive.enable = true;
       vim.git.gitsigns.enable = true;
+    };
+  };
+  services.spotifyd = {
+    enable = true;
+    settings.global = {
+      bitrate = 320;
+      username = "alltheusernamesweretaken";
+      password = import ./spotify-password
     };
   };
 }
