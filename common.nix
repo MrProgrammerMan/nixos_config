@@ -52,6 +52,7 @@
   services.printing.enable = true;
 
   services.pulseaudio.enable = false;
+  programs.noisetorch.enable = true;
   security.rtkit.enable = true;
   
   services.pipewire = {
