@@ -20,8 +20,6 @@
       inherit system;
       config = { allowUnfree = true; };
     };
-
-    spotify-password = builtins.readFile "${builtins.getEnv "HOME"}/.secrets/spotify-password.txt";
   in {
     nixosConfigurations = {
       nixos-desktop = nixpkgs-unstable.lib.nixosSystem {
@@ -34,7 +32,7 @@
 	  nvf.nixosModules.default
         ];
         specialArgs = {
-          inherit pkgs-stable spotify-password;
+          inherit pkgs-stable;
         };
       };
 
@@ -48,7 +46,7 @@
 	  nvf.nixosModules.default
         ];
         specialArgs = {
-          inherit pkgs-stable spotify-password;
+          inherit pkgs-stable;
         };
       };
     };
