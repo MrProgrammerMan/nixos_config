@@ -184,7 +184,7 @@
     settings.global = {
       bitrate = 320;
       username = "alltheusernamesweretaken";
-      password = import ./spotify-password
+      password = import ./spotify-password;
     };
   };
 }
