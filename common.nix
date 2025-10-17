@@ -1,4 +1,4 @@
-{ config, pkgs, pkgs-stable, ... }:
+{ config, pkgs, pkgs-stable, spotify-password, ... }:
 
 {
   networking.networkmanager.enable = true;
@@ -184,7 +184,7 @@
     settings.global = {
       bitrate = 320;
       username = "alltheusernamesweretaken";
-      password = import ./spotify-password;
+      password = spotify-password;
     };
   };
 }
