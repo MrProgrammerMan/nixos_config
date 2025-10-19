@@ -4,9 +4,13 @@
   inputs = {
     nixpkgs = { url = "github:NixOS/nixpkgs/nixos-unstable"; };
     nvf.url = "github:notashelf/nvf";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   
-  outputs = inputs@{ self, nixpkgs, nvf, ... }:
+  outputs = inputs@{ self, nixpkgs, nvf, home-manager, ... }:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs {
@@ -20,6 +24,7 @@
         modules = [
           ./hosts/desktop
 	  nvf.nixosModules.default
+	  home-manager.nixosModules.default
         ];
       };
 
@@ -28,6 +33,7 @@
         modules = [
           ./hosts/laptop
 	  nvf.nixosModules.default
+	  home-manager.nixosModules.default
         ];
       };
     };
