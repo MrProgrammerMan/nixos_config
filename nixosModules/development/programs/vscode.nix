@@ -1,8 +1,8 @@
-{ vscode-extensions, ... }: {
+{ pkgs, ... }: {
   config = {
     programs.vscode = {
       enable = true;
-      extensions = with vscode-extensions; [
+      extensions = with pkgs.vscode-extensions; [
         rust-lang.rust-analyzer
         ms-vscode.live-server
         jnoortheen.nix-ide
