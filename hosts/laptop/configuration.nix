@@ -1,8 +1,4 @@
 { config, pkgs, ... }: {
-  imports = [
-    ./hardware-configuration.nix
-    ../nixosModules
-  ];
   config = {
     networking.hostName = "laptop";
     system.stateVersion = "25.05";

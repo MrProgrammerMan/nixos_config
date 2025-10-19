@@ -62,6 +62,14 @@
 	        nvf.nixosModules.default
         ];
       };
+
+      laptop = nixpkgs-unstable.lib.nixosSystem {
+        inherit system pkgs;
+        modules = [
+          ./hosts/laptop
+	        nvf.nixosModules.default
+        ];
+      };
     };
   };
 }
