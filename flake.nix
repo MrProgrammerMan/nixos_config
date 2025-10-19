@@ -20,6 +20,11 @@
       inherit system;
       config = { allowUnfree = true; };
     };
+
+    pkgs = import nixpkgs-unstable {
+      inherit system;
+      config = { allowUnfree = true; };
+    };
   in {
     nixosConfigurations = {
       nixos-desktop = nixpkgs-unstable.lib.nixosSystem {
@@ -29,7 +34,7 @@
           ./common.nix
           ./hardware-specific-desktop.nix
           ./hardware-configuration-desktop.nix
-	  nvf.nixosModules.default
+	        nvf.nixosModules.default
         ];
         specialArgs = {
           inherit pkgs-stable;
@@ -43,11 +48,19 @@
           ./common.nix
           ./hardware-specific-laptop.nix
           ./hardware-configuration-laptop.nix
-	  nvf.nixosModules.default
+	        nvf.nixosModules.default
         ];
         specialArgs = {
           inherit pkgs-stable;
         };
+      };
+
+      desktop = nixpkgs-unstable.lib.nixosSystem {
+        inherit system pkgs;
+        modules = [
+          ./hosts/desktop
+	        nvf.nixosModules.default
+        ];
       };
     };
   };
