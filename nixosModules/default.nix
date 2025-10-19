@@ -1,3 +1,8 @@
 {
-  imports = [ ./. ];
+  imports = [
+    ./development
+    ./gaming
+    ./general
+    ./system
+  ];
 }
