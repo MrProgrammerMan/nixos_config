@@ -13,5 +13,6 @@
       LC_TIME = "nb_NO.UTF-8";
     };
     console.keyMap = "no";
+    time.timeZone = "Europe/Oslo";
   };
 }
