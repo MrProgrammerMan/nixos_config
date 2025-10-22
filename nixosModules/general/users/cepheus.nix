@@ -15,7 +15,6 @@
         thunderbird
         firefox
         zettlr
-	vlc
       ];
     };
   };
