@@ -11,6 +11,7 @@
         vscjava.vscode-java-debug
         redhat.java
 	haskell.haskell
+	justusadam.language-haskell
       ];
     };
   };
