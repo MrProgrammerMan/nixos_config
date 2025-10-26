@@ -10,6 +10,7 @@
         vscjava.vscode-java-pack
         vscjava.vscode-java-debug
         redhat.java
+	haskell.haskell
       ];
     };
   };
