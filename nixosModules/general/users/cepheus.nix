@@ -15,7 +15,6 @@
         thunderbird
         firefox
         zettlr
-	haskellPackages.hls
       ];
     };
   };
