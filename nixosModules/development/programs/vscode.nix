@@ -12,7 +12,7 @@
         redhat.java
 	haskell.haskell
 	justusadam.language-haskell
-      ];
+      ] ++ [pkgs.haskellPackages.hls];
     };
   };
 }
