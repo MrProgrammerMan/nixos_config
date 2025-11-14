@@ -18,7 +18,7 @@
 	gnomeExtensions.gsconnect
 	obsidian
 	blanket
-	gnome-shell-extension-cronomix
+	gnomeExtensions.cronomix
       ];
     };
   };
