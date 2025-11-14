@@ -1,6 +1,6 @@
 { pkgs, ...}: {
   config = {
-    users.users.cepheus = {
+    users.users.carro = {
       isNormalUser = true;
       description = "Caroline";
       extraGroups = [ "networkmanager" "wheel" ];
