@@ -4,7 +4,7 @@
       isNormalUser = true;
       description = "Caroline";
       extraGroups = [ "networkmanager" ];
-      hashedPassword = "$6$pneBpmZMJV5BqKi/$n.k2HbZPiWPmhKbGq16/aW0EGDbz2f1OzLfdAqThlJIuNp9G3PerJi1qsj5QM5mrTMuF2A.AmUWATWbhNs6OJ.";
+      hashedPassword = "$6$eXQWL9QpZlMG2qLy$xdi2LZ2H0wUQ.PYlBMjwfsx3Tt/9mn7zoJGAmwNiKxQ3x5e26VdLD2TZU4LKqgygDVQylFSYZG1hLycNN8.Ji/";
       packages = with pkgs; [
         onedrive
 	libreoffice
