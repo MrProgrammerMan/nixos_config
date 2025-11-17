@@ -33,7 +33,6 @@
           ./hosts/desktop
 	  nvf.nixosModules.default
 	  home-manager.nixosModules.default
-	  hyprland.nixosModules.default
         ];
       };
 
@@ -46,7 +45,6 @@
           ./hosts/laptop
 	  nvf.nixosModules.default
 	  home-manager.nixosModules.default
-	  hyprland.nixosModules.default
         ];
       };
     };
