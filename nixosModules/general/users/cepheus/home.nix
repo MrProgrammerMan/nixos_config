@@ -4,7 +4,7 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    plugins = with hyprlandPlugins; [
+    plugins = with pkgs.hyprlandPlugins; [
       
     ];
     settings = {
