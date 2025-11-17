@@ -16,6 +16,7 @@
         xournalpp
 	microsoft-edge
 	p3x-onenote
+	spotify
 	gnomeExtensions.gsconnect
 	obsidian
 	blanket
