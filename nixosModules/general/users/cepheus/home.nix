@@ -1,16 +1,18 @@
 { pkgs, home-manager, ... }: {
-  home.username = "cepheus";
-  home.homeDirectory = "/home/cepheus";
+  home-manager.users.cepheus = {
+    home.username = "cepheus";
+    home.homeDirectory = "/home/cepheus";
 
-  wayland.windowManager.hyprland = {
-    enable = true;
-    plugins = with pkgs.hyprlandPlugins; [
+    wayland.windowManager.hyprland = {
+      enable = true;
+      plugins = with pkgs.hyprlandPlugins; [
       
-    ];
-    settings = {
+      ];
+      settings = {
 
+      };
     };
-  };
 
-  home.stateVersion = "25.05";
+    home.stateVersion = "25.05";
+  };
 }
