@@ -40,6 +40,7 @@
           ./hosts/laptop
 	  nvf.nixosModules.default
 	  home-manager.nixosModules.default
+	  hyprland.nixosModules.default
         ];
       };
     };
