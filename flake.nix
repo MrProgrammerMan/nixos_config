@@ -26,6 +26,9 @@
     nixosConfigurations = {
       desktop = nixpkgs.lib.nixosSystem {
         inherit system pkgs;
+	specialArgs = {
+	  inherit inputs;
+	};
         modules = [
           ./hosts/desktop
 	  nvf.nixosModules.default
@@ -36,6 +39,9 @@
 
       laptop = nixpkgs.lib.nixosSystem {
         inherit system pkgs;
+	specialArgs = {
+	  inherit inputs;
+	};
         modules = [
           ./hosts/laptop
 	  nvf.nixosModules.default
