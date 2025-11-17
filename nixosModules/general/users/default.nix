@@ -1,7 +1,7 @@
 {
   imports = [
     ./cepheus.nix
-    ./carro.nix
+    ./carro
   ];
   config = {
     users.mutableUsers = false;
