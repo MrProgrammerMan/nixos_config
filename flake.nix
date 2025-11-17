@@ -15,7 +15,7 @@
     };
   };
   
-  outputs = inputs@{ self, nixpkgs, nvf, home-manager, ... }:
+  outputs = inputs@{ self, nixpkgs, nvf, home-manager, hyprland, hyprland-plugins, ... }:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs {
@@ -30,6 +30,7 @@
           ./hosts/desktop
 	  nvf.nixosModules.default
 	  home-manager.nixosModules.default
+	  hyprland.nixosModules.default
         ];
       };
 
