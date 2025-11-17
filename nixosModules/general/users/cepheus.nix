@@ -15,6 +15,7 @@
         inkscape
         thunderbird
         firefox
+	spotify
         zettlr
 	haskellPackages.hls-plugin-api
       ];
