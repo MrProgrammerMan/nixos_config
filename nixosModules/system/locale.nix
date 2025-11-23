@@ -12,7 +12,7 @@
       LC_TELEPHONE = "nb_NO.UTF-8";
       LC_TIME = "nb_NO.UTF-8";
     };
-    console.keyMap = "no";
+    console.useXkbConfig = true;
     time.timeZone = "Europe/Oslo";
   };
 }
