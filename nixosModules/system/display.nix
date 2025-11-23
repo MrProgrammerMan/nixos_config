@@ -7,7 +7,7 @@
     services.xserver.xkb = {
       layout = "no";
       variant = "";
-      model = "pc105";
+      model = "pc104";
     };
   };
 }
