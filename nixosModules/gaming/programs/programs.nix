@@ -8,7 +8,7 @@
       gamescopeSession.enable = true;
     };
     programs.gamemode.enable = true;
-    user.users.cepheus.packages = with pkgs; [
+    users.users.cepheus.packages = with pkgs; [
       prismlauncher
     ];
   };
