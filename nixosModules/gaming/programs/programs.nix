@@ -1,4 +1,4 @@
-{ lib, config, ... }: {
+{ lib, config, pkgs, ... }: {
   options = {
     gaming.programs.enable = lib.mkEnableOption "enables gaming programs";
   };
@@ -8,5 +8,8 @@
       gamescopeSession.enable = true;
     };
     programs.gamemode.enable = true;
+    user.users.cepheus.packages = with pkgs; [
+      prismlauncher
+    ];
   };
 }
