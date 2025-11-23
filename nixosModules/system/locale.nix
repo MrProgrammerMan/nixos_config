@@ -1,6 +1,6 @@
 {
   config = {
-    i18n.defaultLocale = "en_GB.UTF-8";
+    i18n.defaultLocale = "nb_NO.UTF-8";
     i18n.extraLocaleSettings = {
       LC_ADDRESS = "nb_NO.UTF-8";
       LC_IDENTIFICATION = "nb_NO.UTF-8";
