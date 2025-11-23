@@ -9,5 +9,6 @@
       variant = "";
       model = "pc105";
     };
+    console.useXkbConfig = true;
   };
 }
