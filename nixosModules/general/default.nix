@@ -1,6 +1,5 @@
 {
   imports = [
     ./users
-    ./desktop.nix
   ];
 }

@@ -1,4 +1,4 @@
-{
+{ pkgs, ... }: {
   config = {
     services.xserver.enable = true;
     services.displayManager.gdm.enable = true;
@@ -8,5 +8,8 @@
       layout = "no";
       variant = "nodeadkeys";
     };
+
+    programs.hyprland.enable = true;
+    environment.systemPackages = [ pkgs.kitty ];
   };
 }
