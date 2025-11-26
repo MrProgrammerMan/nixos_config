@@ -1,6 +1,6 @@
 { lib, config, ... }: {
   imports = [
-    ./programs
+    ./programs.nix
   ];
   options = {
     gaming.enable = lib.mkEnableOption "enables gaming stuff";
