@@ -7,7 +7,7 @@
     ./locale.nix
     ./networking.nix
     ./printing.nix
-    ./nix
+    ./nix.nix
     ./shell-aliases
     ./systemd
   ];
