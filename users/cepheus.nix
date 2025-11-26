@@ -15,6 +15,7 @@
       zettlr
       signal-desktop
       mako
+      xdg-desktop-portal-hyprland
     ];
   };
   programs.vscode = {
