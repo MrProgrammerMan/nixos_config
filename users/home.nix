@@ -1,4 +1,4 @@
-{ home-manager, pkgs, config, ... }: {
+{ home-manager, ... }: {
   home-manager = {
     useGlobalPkgs = true;
     users.cepheus = import ./cepheus.nix;
