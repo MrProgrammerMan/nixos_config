@@ -13,6 +13,6 @@
       enable = true;
       xwayland = true;
     };
-    environment.systemPackages = [ pkgs.kitty waybar hyprpaper ];
+    environment.systemPackages = with pkgs; [ kitty waybar hyprpaper ];
   };
 }
