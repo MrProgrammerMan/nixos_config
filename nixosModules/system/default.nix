@@ -8,5 +8,6 @@
     ./printing.nix
     ./nix.nix
     ./systemd.nix
+    ./packages.nix
   ];
 }
