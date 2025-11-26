@@ -28,6 +28,7 @@
           ./hosts/desktop
 	  nvf.nixosModules.default
 	  home-manager.nixosModules.home-manager
+	  ./users/home.nix
         ];
       };
 
@@ -40,6 +41,7 @@
           ./hosts/laptop
 	  nvf.nixosModules.default
 	  home-manager.nixosModules.home-manager
+	  ./users/home.nix
         ];
       };
     };
