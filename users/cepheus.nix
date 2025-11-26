@@ -14,6 +14,7 @@
       spotify
       zettlr
       signal-desktop
+      mako
     ];
   };
   programs.vscode = {
