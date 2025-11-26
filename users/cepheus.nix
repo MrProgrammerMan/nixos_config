@@ -33,7 +33,7 @@
   wayland.windowManager.hyprland = {
     settings = {
       general = {
-	border_siz = 10;
+	border_size = 10;
       };
     };
   };
