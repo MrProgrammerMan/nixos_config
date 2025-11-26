@@ -9,7 +9,10 @@
       variant = "nodeadkeys";
     };
 
-    programs.hyprland.enable = true;
-    environment.systemPackages = [ pkgs.kitty ];
+    programs.hyprland = {
+      enable = true;
+      xwayland = true;
+    };
+    environment.systemPackages = [ pkgs.kitty waybar hyprpaper ];
   };
 }
