@@ -14,5 +14,6 @@
       xwayland.enable = true;
     };
     environment.systemPackages = with pkgs; [ kitty ];
+    environment.variables.NIXOS_OZONE_WL=1;
   };
 }
