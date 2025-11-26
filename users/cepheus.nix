@@ -16,6 +16,7 @@
       signal-desktop
       mako
       xdg-desktop-portal-hyprland
+      hyprpolkitagent
     ];
   };
   programs.vscode = {
