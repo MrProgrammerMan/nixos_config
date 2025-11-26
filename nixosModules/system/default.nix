@@ -9,6 +9,6 @@
     ./printing.nix
     ./nix.nix
     ./shell-aliases.nix
-    ./systemd
+    ./systemd.nix
   ];
 }
