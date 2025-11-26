@@ -18,7 +18,7 @@
   };
   programs.vscode = {
     enable = true;
-    extensions = with pkgs.vscode-extensions; [
+    profiles.default.extensions = with pkgs.vscode-extensions; [
       rust-lang.rust-analyzer
       ms-vscode.live-server
       jnoortheen.nix-ide
