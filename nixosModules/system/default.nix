@@ -8,7 +8,7 @@
     ./networking.nix
     ./printing.nix
     ./nix.nix
-    ./shell-aliases
+    ./shell-aliases.nix
     ./systemd
   ];
 }
