@@ -28,12 +28,6 @@
           ./hosts/desktop
 	  nvf.nixosModules.default
 	  home-manager.nixosModules.home-manager
-	  {
-	    home-manager = {
-	      useGlobalPkgs = true;
-	      useUserPkgs = true;
-	    };
-	  };
         ];
       };
 
@@ -45,7 +39,7 @@
         modules = [
           ./hosts/laptop
 	  nvf.nixosModules.default
-	  home-manager.nixosModules.default
+	  home-manager.nixosModules.home-manager
         ];
       };
     };
