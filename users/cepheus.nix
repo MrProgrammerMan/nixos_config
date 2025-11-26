@@ -30,4 +30,11 @@
       justusadam.language-haskell
     ];
   };
+  wayland.windowManager.hyprland = {
+    settings = {
+      general = {
+	border_size = 10;
+      };
+    };
+  };
 }
