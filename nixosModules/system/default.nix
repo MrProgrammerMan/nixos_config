@@ -10,5 +10,6 @@
     ./nix.nix
     ./shell-aliases.nix
     ./systemd.nix
+    ./packages.nix
   ];
 }
