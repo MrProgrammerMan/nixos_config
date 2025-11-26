@@ -36,8 +36,8 @@
 	border_size = 1;
 	gaps_in = 3;
 	gaps_out = 2;
-	col.inactive_border = rgb(0, 0, 0);
-	col.active_border = rgb(0, 0, 255);
+	"col.inactive_border" = "rgb(0, 0, 0)";
+	"col.active_border" = "rgb(0, 0, 255)";
       };
     };
   };
