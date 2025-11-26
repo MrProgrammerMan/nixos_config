@@ -8,14 +8,9 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland.url = "github:hyprwm/Hyprland";
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
-    };
   };
   
-  outputs = inputs@{ self, nixpkgs, nvf, home-manager, hyprland, hyprland-plugins, ... }:
+  outputs = inputs@{ self, nixpkgs, nvf, home-manager, ... }:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs {
