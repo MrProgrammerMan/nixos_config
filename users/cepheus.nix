@@ -17,7 +17,7 @@
       mako
       xdg-desktop-portal-hyprland
       hyprpolkitagent
-      qtwayland
+      libsForQt5.qt5.qtwayland
     ];
   };
   programs.vscode = {
