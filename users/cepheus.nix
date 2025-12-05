@@ -19,6 +19,7 @@
       hyprpolkitagent
       libsForQt5.qt5.qtwayland
       openvpn
+      solaar
     ];
   };
   programs.vscode = {
