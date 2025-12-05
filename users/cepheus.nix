@@ -18,6 +18,7 @@
       xdg-desktop-portal-hyprland
       hyprpolkitagent
       libsForQt5.qt5.qtwayland
+      openvpn
     ];
   };
   programs.vscode = {
