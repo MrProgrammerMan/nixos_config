@@ -21,6 +21,7 @@
       openvpn
       solaar
       reaper
+      vial
     ];
   };
   programs.vscode = {
