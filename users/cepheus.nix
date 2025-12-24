@@ -22,6 +22,7 @@
       solaar
       reaper
       vial
+      rawtherapee
     ];
   };
   programs.vscode = {
