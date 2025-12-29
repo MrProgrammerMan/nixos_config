@@ -4,7 +4,7 @@
       cepheus = {
         isNormalUser = true;
         description = "Jonas";
-        extraGroups = [ "networkmanager" "wheel" "input" ];
+        extraGroups = [ "networkmanager" "wheel" "input" "abdusers" "kvm" ];
         hashedPassword = "$6$FcB9ictE6iKsk9AO$71mmUjZ4WW9X58.bhF1jUatvGce8vscNxvFJfRV5WXyIz0Z6mROsEiqVSQ2alJq1KhTW5fuYSIALuXW8y4rzZ1";
       };
       carro = {
