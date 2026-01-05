@@ -1,7 +1,4 @@
 xkb_symbols "f13_acute" {
-    key <FK13> {
-        type= "ONE_LEVEL",
-        symbols[Group1]= [ dead_acute ]
-    };
+    key <FK13> { [ F13 ] };
 };
 
