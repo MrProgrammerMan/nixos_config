@@ -6,9 +6,7 @@
     programs.git = {
       enable = true;
       config = {
-        global = {
-	  credential = "https://github.com.useHttpPath";
-        };
+        credential."https://github.com.useHttpPath" = true;
       };
     };
     programs.firefox.enable = true;
