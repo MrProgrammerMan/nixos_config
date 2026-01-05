@@ -5,6 +5,7 @@
     ];
     programs.git = {
       enable = true;
+      package = pkgs.gitFull;
       config = {
 	credential.helper = "git-credential-store";
         "credential \"https://github.com\"" = {
