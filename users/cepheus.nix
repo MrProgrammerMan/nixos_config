@@ -23,6 +23,7 @@
       reaper
       vial
       rawtherapee
+      protonmail-desktop
     ];
   };
   programs.vscode = {
