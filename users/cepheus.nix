@@ -52,7 +52,7 @@
       };
     };
   };
-  programs.git.settings = {
+  programs.git.config = {
     credential.helper = "libsecret";
     "credential \"https://github.com\"".useHttpPath = true;
     user.name = "MrProgrammerMan";
