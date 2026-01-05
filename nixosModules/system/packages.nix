@@ -7,7 +7,10 @@
       enable = true;
       config = {
 	credential.helper = "git-credential-store";
-        "credential \"https://github.com\"".useHttpPath = true;
+        "credential \"https://github.com\"" = {
+          useHttpPath = true;
+	  username = "MrProgrammerMan";
+	};
 	user.name = "MrProgrammerMan";
 	url = {
           "https://github.com/" = {
@@ -22,3 +25,4 @@
     programs.firefox.enable = true;
   };
 }
+
