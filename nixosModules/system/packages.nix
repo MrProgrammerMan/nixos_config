@@ -6,6 +6,7 @@
     programs.git = {
       enable = true;
       config = {
+	credential.helper = "git-credential-store";
         "credential \"https://github.com\"".useHttpPath = true;
 	url = {
           "https://github.com/" = {
