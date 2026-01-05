@@ -10,14 +10,7 @@
       extraLayouts.acute = {
         description = "F13 as Nordic dead acute";
         languages = [ "se" ];
-        symbolsFile = ''
-          xkb_symbols "f13_acute" {
-            key <FK13> {
-              type[Group1] = "TWO_LEVEL",
-              symbols[Group1] = [ ISO_Level3_Shift equal ]
-            };
-          };
-        '';
+        symbolsFile = ./xkb_f13.txt;
       };
     };
 
