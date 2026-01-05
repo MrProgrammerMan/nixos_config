@@ -10,4 +10,7 @@
     ./systemd.nix
     ./packages.nix
   ];
+  config = {
+    programs.adb.enable = true;
+  };
 }
