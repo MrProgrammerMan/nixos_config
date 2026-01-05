@@ -8,6 +8,7 @@
       config = {
 	credential.helper = "git-credential-store";
         "credential \"https://github.com\"".useHttpPath = true;
+	user.name = "MrProgrammerMan";
 	url = {
           "https://github.com/" = {
             insteadOf = [
