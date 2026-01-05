@@ -12,7 +12,7 @@
       };
     };
     systemd.tmpfiles.rules = [
-      "d /etc/nixos 0775 root nixos-config -"
+      "Z /etc/nixos 0775 root nixos-config -"
     ];
   };
 }
