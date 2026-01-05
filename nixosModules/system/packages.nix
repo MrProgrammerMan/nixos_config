@@ -7,7 +7,9 @@
       enable = true;
       package = pkgs.gitFull;
       config = {
-	credential.helper = "git-credential-store";
+	credential.helper = "${
+          pkgs.git.override { withLibsecret = true; }
+        }/bin/git-credential-libsecret";
         "credential \"https://github.com\"" = {
           useHttpPath = true;
 	  username = "MrProgrammerMan";
@@ -23,6 +25,7 @@
         };
       };
     };
+    programs.ssh.enableAskPassword = false;
     programs.firefox.enable = true;
   };
 }
