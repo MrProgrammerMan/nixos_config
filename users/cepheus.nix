@@ -24,6 +24,7 @@
       vial
       rawtherapee
       protonmail-desktop
+      libsecret
     ];
   };
   programs.vscode = {
@@ -48,6 +49,19 @@
 	gaps_out = 2;
 	"col.inactive_border" = "rgb(0, 0, 0)";
 	"col.active_border" = "rgb(0, 0, 255)";
+      };
+    };
+  };
+  programs.git.config = {
+    credential.helper = "libsecret";
+    "credential \"https://github.com\"".useHttpPath = true;
+    user.name = "MrProgrammerMan";
+    url = {
+      "https://github.com/" = {
+        insteadOf = [
+          "gh:"
+          "github:"
+        ];
       };
     };
   };
