@@ -25,7 +25,7 @@
       rawtherapee
       protonmail-desktop
       jetbrains.idea
-      teams
+      teams-for-linux
     ];
   };
   programs.vscode = {
