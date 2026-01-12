@@ -33,6 +33,7 @@
     profiles.default.extensions = with pkgs.vscode-extensions; [
       rust-lang.rust-analyzer
       ms-vscode.live-server
+      ritwickdey.liveserver
       jnoortheen.nix-ide
       asvetliakov.vscode-neovim
       vscjava.vscode-java-pack
