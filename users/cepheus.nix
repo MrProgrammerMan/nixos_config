@@ -26,7 +26,7 @@
       protonmail-desktop
       jetbrains.idea
       teams-for-linux
-      openshot-qt
+      davinci-resolve
     ];
   };
   programs.vscode = {
