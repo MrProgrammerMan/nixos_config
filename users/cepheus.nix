@@ -26,8 +26,6 @@
       protonmail-desktop
       jetbrains.idea
       teams-for-linux
-      davinci-resolve
-      ffmpeg
     ];
   };
   programs.vscode = {
