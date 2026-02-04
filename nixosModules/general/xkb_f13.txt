@@ -1,4 +1,0 @@
-xkb_symbols "f13_acute" {
-    key <FK13> { [ F13 ] };
-};
-
