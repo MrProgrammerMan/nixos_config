@@ -1,5 +1,5 @@
-{ pkgs, ...}: {
-  config = {
+{ inputs, ... }: {
+  flake.nixosModules.users = {pkgs, ...}: {
     users.groups.nixos-config = {};
     users.users = {
       cepheus = {

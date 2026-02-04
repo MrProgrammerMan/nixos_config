@@ -1,8 +1,5 @@
-{ lib, config, pkgs, ... }: {
-  options = {
-    gaming.programs.enable = lib.mkEnableOption "enables gaming programs";
-  };
-  config = lib.mkIf config.gaming.programs.enable {
+{ inputs, ... }: {
+  flake.nixosModules.gaming = { pkgs, ... }: {
     programs.steam = {
       enable = true;
       gamescopeSession.enable = true;
@@ -11,5 +8,6 @@
     users.users.cepheus.packages = with pkgs; [
       prismlauncher
     ];
-  };
+  }
+  
 }
