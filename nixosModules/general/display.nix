@@ -7,11 +7,6 @@
     services.xserver.xkb = {
       layout = "no";
       variant = "";
-      extraLayouts.acute = {
-        description = "F13 as Nordic dead acute";
-        languages = [ "se" ];
-        symbolsFile = ./xkb_f13.txt;
-      };
     };
 
     programs.hyprland = {
