@@ -1,5 +1,5 @@
 { inputs, self, ... }: {
-  flake.nixosConfigurations.laptop = inputs.nixpkgs.lib.nixosSystem {
+  flake.nixosConfigurations.desktop = inputs.nixpkgs.lib.nixosSystem {
     modules = with self.nixosModules; [
       desktop
       audio

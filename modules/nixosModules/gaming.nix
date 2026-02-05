@@ -1,4 +1,4 @@
-{ inputs, ... }: {
+{ ... }: {
   flake.nixosModules.gaming = { pkgs, ... }: {
     programs.steam = {
       enable = true;
@@ -8,6 +8,6 @@
     users.users.cepheus.packages = with pkgs; [
       prismlauncher
     ];
-  }
+  };
   
 }

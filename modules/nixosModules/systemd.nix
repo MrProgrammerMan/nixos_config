@@ -1,4 +1,4 @@
-{ inputs, ... }: {
+{ ... }: {
   flake.nixosModules.systemd = { pkgs, ... }: {
     systemd.services.nixos-flake-update = {
       description = "Pull latest /etc/nixos flake on startup";

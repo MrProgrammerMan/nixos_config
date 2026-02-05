@@ -1,5 +1,5 @@
-{ inputs, ... }: {
-  flake.nixosModules.locale = { pkgs, ... }: {
+{ ... }: {
+  flake.nixosModules.locale = { ... }: {
     i18n.defaultLocale = "en_GB.UTF-8";
     i18n.extraLocaleSettings = {
       LC_ADDRESS = "nb_NO.UTF-8";

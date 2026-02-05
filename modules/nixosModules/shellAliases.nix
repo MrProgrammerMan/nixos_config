@@ -1,5 +1,5 @@
-{ inputs, ... }: {
-  flake.nixosModules.shellAliases = { pkgs, ... }: {
+{ ... }: {
+  flake.nixosModules.shellAliases = { ... }: {
     environment.shellAliases = {
       nixsw = ''
         cd /etc/nixos &&
