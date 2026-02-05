@@ -28,6 +28,24 @@
       teams-for-linux
     ];
   };
+  programs.git = {
+      config = {
+        credential.helper = "${pkgs.git.override { withLibsecret = true; }}/bin/git-credential-libsecret";
+        "credential \"https://github.com\"" = {
+          useHttpPath = true;
+          username = "MrProgrammerMan";
+        };
+        user.name = "MrProgrammerMan";
+        url = {
+          "https://github.com/" = {
+            insteadOf = [
+              "gh:"
+              "github:"
+            ];
+          };
+        };
+      };
+    };
   programs.vscode = {
     enable = true;
     package = pkgs.vscode-fhs;
