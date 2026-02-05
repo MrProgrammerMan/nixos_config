@@ -2,16 +2,9 @@
   flake.nixosConfigurations.laptop = inputs.nixpkgs.lib.nixosSystem {
     modules = with self.nixosModules; [
       laptop
-      audio
-      boot
-      display
-      gaming
-      graphics
-      locale
-      networking
-      nix
+      starter
+      hyprland
       packages
-      printing
       shellAliases
       systemd
       users
