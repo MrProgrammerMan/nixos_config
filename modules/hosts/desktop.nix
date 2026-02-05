@@ -5,7 +5,6 @@
       starter
       gaming
       hyprland
-      packages
       shellAliases
       systemd
       users

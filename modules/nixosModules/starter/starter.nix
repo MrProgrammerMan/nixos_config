@@ -9,6 +9,7 @@
       networking
       nix
       printing
+      packages
     ];
   };
 }

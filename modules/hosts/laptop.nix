@@ -4,7 +4,6 @@
       laptop
       starter
       hyprland
-      packages
       shellAliases
       systemd
       users
