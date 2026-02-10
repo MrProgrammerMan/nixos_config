@@ -42,6 +42,7 @@
       redhat.java
       haskell.haskell
       justusadam.language-haskell
+      anweber.vscode-httpyac
     ];
   };
   wayland.windowManager.hyprland = {
