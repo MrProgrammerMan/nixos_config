@@ -33,7 +33,7 @@
       rust-lang.rust-analyzer
       ritwickdey.liveserver
       jnoortheen.nix-ide
-      vscjava.vscode-java-pack
+      redhat.java
       anweber.vscode-httpyac
     ];
   };
