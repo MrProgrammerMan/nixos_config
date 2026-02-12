@@ -10,7 +10,7 @@
     };
   };
   
-  outputs = inputs@{ self, nixpkgs, nixpkgs-stable, nvf, home-manager, ... }:
+  outputs = inputs@{ self, nixpkgs, nvf, home-manager, ... }:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs {

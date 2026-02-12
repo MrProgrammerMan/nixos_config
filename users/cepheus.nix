@@ -28,7 +28,7 @@
   };
   programs.vscode = {
     enable = true;
-    package = pkgs-stable.vscode-fhs;
+    package = pkgs.vscode-fhs;
     profiles.default.extensions = with pkgs.vscode-extensions; [
       rust-lang.rust-analyzer
       ritwickdey.liveserver
