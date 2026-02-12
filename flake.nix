@@ -27,7 +27,7 @@
       desktop = nixpkgs.lib.nixosSystem {
         inherit system pkgs;
 	specialArgs = {
-	  inherit inputs;
+	  inherit inputs pkgs-stable;
 	};
         modules = [
           ./hosts/desktop
@@ -40,7 +40,7 @@
       laptop = nixpkgs.lib.nixosSystem {
         inherit system pkgs;
 	specialArgs = {
-	  inherit inputs;
+	  inherit inputs pkgs-stable;
 	};
         modules = [
           ./hosts/laptop
