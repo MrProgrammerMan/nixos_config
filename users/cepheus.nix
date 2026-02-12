@@ -1,4 +1,4 @@
-{ config, pkgs, pkgs-stable, ...}: {
+{ config, pkgs, inputs, ...}: {
   home = {
     username = "cepheus";
     homeDirectory = "/home/cepheus";
@@ -30,7 +30,7 @@
   };
   programs.vscode = {
     enable = true;
-    package = pkgs-stable.vscode-fhs;
+    package = inputs.pkgs-stable.vscode-fhs;
     profiles.default.extensions = with pkgs.vscode-extensions; [
       rust-lang.rust-analyzer
       ritwickdey.liveserver
