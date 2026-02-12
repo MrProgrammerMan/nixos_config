@@ -1,4 +1,4 @@
-{ config, pkgs, pkgs-stable, ...}: {
+{ config, pkgs, ...}: {
   home = {
     username = "cepheus";
     homeDirectory = "/home/cepheus";
@@ -24,8 +24,6 @@
       vial
       rawtherapee
       protonmail-desktop
-      jetbrains.idea
-      teams-for-linux
     ];
   };
   programs.vscode = {
