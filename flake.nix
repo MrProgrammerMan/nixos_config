@@ -3,6 +3,7 @@
   
   inputs = {
     nixpkgs = { url = "github:NixOS/nixpkgs/nixos-unstable"; };
+    nixpkgs-stable = { url = "github:NixOS/nixpkgs/nixos-25.11"; };
     nvf.url = "github:notashelf/nvf";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -10,17 +11,21 @@
     };
   };
   
-  outputs = inputs@{ self, nixpkgs, nvf, home-manager, ... }:
+  outputs = inputs@{ self, nixpkgs, nixpkgs-stable, nvf, home-manager, ... }:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs {
       inherit system;
       config = { allowUnfree = true; };
     };
+    pkgs-stable = import nixpkgs-stable {
+      inherit system;
+      config = { allowUnfree = true; };
+    };
   in {
     nixosConfigurations = {
       desktop = nixpkgs.lib.nixosSystem {
-        inherit system pkgs;
+        inherit system pkgs pkgs-stable;
 	specialArgs = {
 	  inherit inputs;
 	};
@@ -33,7 +38,7 @@
       };
 
       laptop = nixpkgs.lib.nixosSystem {
-        inherit system pkgs;
+        inherit system pkgs pkgs-stable;
 	specialArgs = {
 	  inherit inputs;
 	};
