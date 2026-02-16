@@ -24,6 +24,7 @@
       vial
       rawtherapee
       protonmail-desktop
+      digital
     ];
   };
   programs.vscode = {
