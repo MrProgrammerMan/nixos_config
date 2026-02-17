@@ -1,4 +1,4 @@
-{ config, pkgs, ...}: {
+{ pkgs, ... }: {
   home = {
     username = "cepheus";
     homeDirectory = "/home/cepheus";
@@ -29,23 +29,23 @@
     ];
   };
   programs.git = {
-      config = {
-        credential.helper = "${pkgs.git.override { withLibsecret = true; }}/bin/git-credential-libsecret";
-        "credential \"https://github.com\"" = {
-          useHttpPath = true;
-          username = "MrProgrammerMan";
-        };
-        user.name = "MrProgrammerMan";
-        url = {
-          "https://github.com/" = {
-            insteadOf = [
-              "gh:"
-              "github:"
-            ];
-          };
+    config = {
+      credential.helper = "${pkgs.git.override { withLibsecret = true; }}/bin/git-credential-libsecret";
+      "credential \"https://github.com\"" = {
+        useHttpPath = true;
+        username = "MrProgrammerMan";
+      };
+      user.name = "MrProgrammerMan";
+      url = {
+        "https://github.com/" = {
+          insteadOf = [
+            "gh:"
+            "github:"
+          ];
         };
       };
     };
+  };
   programs.vscode = {
     enable = true;
     package = pkgs.vscode-fhs;
@@ -65,15 +65,15 @@
   wayland.windowManager.hyprland = {
     settings = {
       general = {
-	border_size = 1;
-	gaps_in = 3;
-	gaps_out = 2;
-	float_gaps = 0;
-	gaps_workspaces = 0;
-	col = {
-	  inactive_border = "rgb(0,0,0)";
-	  active_border = "rgb(0,0,255)";
-	};
+        border_size = 1;
+        gaps_in = 3;
+        gaps_out = 2;
+        float_gaps = 0;
+        gaps_workspaces = 0;
+        col = {
+          inactive_border = "rgb(0,0,0)";
+          active_border = "rgb(0,0,255)";
+        };
       };
     };
   };

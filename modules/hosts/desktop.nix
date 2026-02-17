@@ -8,6 +8,9 @@
       shellAliases
       systemd
       users
+      inputs.home-manager.nixosModules.home-manager
+      carro
+      cepheus
     ];
   };
 

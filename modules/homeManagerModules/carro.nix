@@ -1,8 +1,9 @@
-{ config, pkgs, ...}: {
+{ pkgs, ... }: {
   home = {
     username = "carro";
     homeDirectory = "/home/carro";
-    stateVersion  = "25.05";
+    stateVersion = "25.05";
+
     packages = with pkgs; [
       onedrive
       chromium
