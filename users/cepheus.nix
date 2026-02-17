@@ -25,6 +25,7 @@
       rawtherapee
       protonmail-desktop
       digital
+      gaphor
     ];
   };
   programs.vscode = {
