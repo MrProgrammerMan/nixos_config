@@ -6,7 +6,6 @@
     packages = with pkgs; [
       onedrive
       chromium
-      firefox
       signal-desktop
       discord
       thunderbird

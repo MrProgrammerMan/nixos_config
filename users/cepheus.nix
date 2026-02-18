@@ -26,6 +26,7 @@
       protonmail-desktop
       jetbrains.idea
       teams-for-linux
+      prism-launcher
     ];
   };
   programs.git = {

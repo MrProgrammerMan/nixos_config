@@ -6,7 +6,6 @@
       hyprland
       shellAliases
       systemd
-      users
     ];
   };
 

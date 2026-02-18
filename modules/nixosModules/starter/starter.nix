@@ -1,6 +1,6 @@
 { self, ... }: {
   flake.nixosModules.starter = { ... }: {
-    modules = with self.nixosModules; [
+    imports = with self.nixosModules; [
       audio
       boot
       display

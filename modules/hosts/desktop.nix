@@ -6,8 +6,11 @@
       gaming
       hyprland
       shellAliases
-      systemd
-      users
+      # Home manager
+      inputs.home-manager.nixosModules.home-manager
+      # Users
+      cepheus
+      carro
     ];
   };
 
