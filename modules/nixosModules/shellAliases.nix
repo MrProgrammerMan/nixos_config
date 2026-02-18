@@ -1,21 +1,14 @@
 { ... }: {
   flake.nixosModules.shellAliases = { ... }: {
     environment.shellAliases = {
-      nixsw = ''
+      nixedit = ''
         cd /etc/nixos &&
-        git add . &&
-        git commit -m "Flake content update($(hostname))" || true &&
-        git push &&
-        sudo nixos-rebuild switch --flake .#$(hostname)
+        git pull
       '';
-      nixup = ''
+      nixactivate = ''
         cd /etc/nixos &&
         git add . &&
         git commit -m "Flake content update($(hostname))" || true &&
-        git push &&
-        nix flake update &&
-        git add . &&
-        git commit -m "Flake update($(hostname))" || true &&
         git push &&
         sudo nixos-rebuild switch --flake .#$(hostname)
       '';
