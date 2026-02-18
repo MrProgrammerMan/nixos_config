@@ -20,7 +20,7 @@
     home.username = "carro";
     home.homeDirectory = "/home/carro";
     imports = with self.homeModules; [
-      # git
+      
     ];
   };
 }
