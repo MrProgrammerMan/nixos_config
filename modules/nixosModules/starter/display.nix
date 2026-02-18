@@ -1,5 +1,5 @@
-{ pkgs, ... }: {
-  config = {
+{ ... }: {
+  flake.nixosModules.display = { ... }: {
     services.xserver.enable = true;
     services.displayManager.gdm.enable = true;
     services.desktopManager.gnome.enable = true;
@@ -8,12 +8,5 @@
       layout = "no";
       variant = "";
     };
-
-    programs.hyprland = {
-      enable = true;
-      xwayland.enable = true;
-    };
-    environment.systemPackages = with pkgs; [ kitty ];
-    environment.variables.NIXOS_OZONE_WL=1;
   };
 }
