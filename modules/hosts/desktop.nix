@@ -6,6 +6,7 @@
       gaming
       hyprland
       shellAliases
+      systemd
       # Home manager
       inputs.home-manager.nixosModules.home-manager
       # Users
