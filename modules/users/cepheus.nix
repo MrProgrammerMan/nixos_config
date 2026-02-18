@@ -22,6 +22,7 @@
     home.homeDirectory = "/home/cepheus";
     imports = with self.homeModules; [
       git
+      vscode
     ];
     packages = with pkgs; [
       bitwarden-desktop
