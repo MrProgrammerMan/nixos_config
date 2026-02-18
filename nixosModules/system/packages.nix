@@ -28,6 +28,7 @@
     programs.ssh.enableAskPassword = false;
     programs.firefox.enable = true;
     virtualisation.virtualbox.host.enable = true;
+    virtualisation.virtualbox.host.enableExtensionPack = true;
     virtualisation.docker = {
       enable = true;
     };

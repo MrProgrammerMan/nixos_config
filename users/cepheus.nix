@@ -38,6 +38,7 @@
       jnoortheen.nix-ide
       redhat.java
       anweber.vscode-httpyac
+      theangryepicbanana.language-pascal
     ];
   };
   wayland.windowManager.hyprland = {
