@@ -17,14 +17,14 @@
     { home.stateVersion = config.system.stateVersion; };
   };
 
-  flake.homeModules.cepheus = { config, ... }: {
+  flake.homeModules.cepheus = { pkgs, config, ... }: {
     home.username = "cepheus";
     home.homeDirectory = "/home/cepheus";
     imports = with self.homeModules; [
       git
       vscode
     ];
-    packages = with pkgs; [
+    home.packages = with pkgs; [
       bitwarden-desktop
       discord
       gimp
