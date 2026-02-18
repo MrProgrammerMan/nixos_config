@@ -26,6 +26,7 @@
       protonmail-desktop
       digital
       gaphor
+      pdf4qt
     ];
   };
   programs.vscode = {
