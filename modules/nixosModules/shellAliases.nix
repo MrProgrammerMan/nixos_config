@@ -3,7 +3,8 @@
     environment.shellAliases = {
       nixedit = ''
         cd /etc/nixos &&
-        git pull
+        git pull &&
+        code .
       '';
       nixactivate = ''
         cd /etc/nixos &&
