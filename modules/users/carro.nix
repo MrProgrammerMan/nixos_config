@@ -1,6 +1,9 @@
 { inputs, self, ... }: {
   flake.homeConfigurations.carro = inputs.home-manager.lib.homeManagerConfiguration {
-    modules = [ self.homeModules.carro ];
+    modules = [ 
+      self.homeModules.carro
+      inputs.agenix.homeManagerModules.default
+    ];
   };
 
   flake.nixosModules.carro = { config, ... }: {

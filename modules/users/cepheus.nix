@@ -1,6 +1,9 @@
 { inputs, self, ... }: {
   flake.homeConfigurations.cepheus = inputs.home-manager.lib.homeManagerConfiguration {
-    modules = [ self.homeModules.cepheus ];
+    modules = [
+      self.homeModules.cepheus
+      inputs.agenix.homeManagerModules.default
+    ];
   };
 
   flake.nixosModules.cepheus =  { config, ... }: {

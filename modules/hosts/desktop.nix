@@ -7,7 +7,9 @@
       hyprland
       shellAliases
       systemd
+      # libs
       homeManager
+      inputs.agenix.nixosModules.default
       # Users
       cepheus
       carro
