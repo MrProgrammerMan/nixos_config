@@ -7,6 +7,7 @@
       hyprland
       shellAliases
       systemd
+      udev
       homeManager
       # Users
       cepheus
