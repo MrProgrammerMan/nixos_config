@@ -6,6 +6,7 @@
       hyprland
       shellAliases
       systemd
+      udev
       # libs
       homeManager
       inputs.agenix.nixosModules.default
