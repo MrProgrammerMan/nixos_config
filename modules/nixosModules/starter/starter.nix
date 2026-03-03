@@ -8,8 +8,9 @@
       locale
       networking
       nix
-      printing
       packages
+      printing
+      ssh
     ];
   };
 }
