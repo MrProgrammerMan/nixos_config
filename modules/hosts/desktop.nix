@@ -3,6 +3,7 @@
     modules = with self.nixosModules; [
       desktop
       starter
+      docker
       gaming
       hyprland
       shellAliases

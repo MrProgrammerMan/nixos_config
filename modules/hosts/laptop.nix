@@ -3,6 +3,7 @@
     modules = with self.nixosModules; [
       laptop
       starter
+      docker
       hyprland
       shellAliases
       systemd
