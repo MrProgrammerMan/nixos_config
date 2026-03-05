@@ -35,6 +35,7 @@
       vial
       rawtherapee
       protonmail-desktop
+      act
     ];
   };
 }
