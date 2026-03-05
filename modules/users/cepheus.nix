@@ -25,6 +25,7 @@
       git
       vscode
       packages
+      email
     ];
   };
 }

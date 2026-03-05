@@ -6,4 +6,6 @@ let
 in
 {
   "email/personal/address.age".publicKeys = [ cepheus ];
+  "email/personal/name.age".publicKeys = [ cepheus ];
+  "email/personal/password.age".publicKeys = [ cepheus ];
 }
