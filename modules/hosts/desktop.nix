@@ -5,6 +5,7 @@
       starter
       gaming
       hyprland
+      secrets
       shellAliases
       systemd
       udev

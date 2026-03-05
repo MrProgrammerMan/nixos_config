@@ -4,6 +4,7 @@
       laptop
       starter
       hyprland
+      secrets
       shellAliases
       systemd
       udev
