@@ -26,7 +26,8 @@
       package = config.boot.kernelPackages.nvidiaPackages.stable;
       modesetting.enable = true;
       nvidiaSettings = true;
-      powerManagement.enable = false;
+      powerManagement.enable = true;
+      powerManagement.finegrained = true;
       open = true;
       prime.sync.enable = false;
     };
@@ -37,6 +38,7 @@
     boot.initrd.kernelModules = [ ];
     boot.kernelModules = [ "kvm-intel" ];
     boot.extraModulePackages = [ ];
+    boot.kernelParams = [ "nvidia.NVreg_TemporaryFilePath=/var/tmp" ];
 
     fileSystems."/" =
       { device = "/dev/disk/by-uuid/069471e5-f88b-4e62-831c-58a7a0b57d84";
