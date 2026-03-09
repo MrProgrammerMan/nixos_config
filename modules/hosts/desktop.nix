@@ -27,7 +27,7 @@
       modesetting.enable = true;
       nvidiaSettings = true;
       powerManagement.enable = false;
-      open = false;
+      open = true;
       prime.sync.enable = false;
     };
 
