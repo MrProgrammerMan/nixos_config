@@ -26,12 +26,10 @@
       package = config.boot.kernelPackages.nvidiaPackages.stable;
       modesetting.enable = true;
       nvidiaSettings = true;
-      powerManagement.enable = false;
+      powerManagement.enable = true;
       open = true;
       prime.sync.enable = false;
     };
-
-    powerManagement.enable = true;
 
     imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
 
