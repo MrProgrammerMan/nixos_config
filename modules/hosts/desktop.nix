@@ -26,7 +26,7 @@
       package = config.boot.kernelPackages.nvidiaPackages.stable;
       modesetting.enable = true;
       nvidiaSettings = true;
-      powerManagement.enable = true;
+      powerManagement.enable = false;
       open = true;
       prime.sync.enable = false;
     };
