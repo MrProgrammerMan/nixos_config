@@ -23,6 +23,7 @@
       vscode
       brave
       direnv
+      zsh
     ];
     home.packages = with pkgs; [
       bitwarden-desktop
