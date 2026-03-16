@@ -22,6 +22,7 @@
       git
       vscode
       brave
+      direnv
     ];
     home.packages = with pkgs; [
       bitwarden-desktop
