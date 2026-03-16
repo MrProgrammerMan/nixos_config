@@ -36,6 +36,7 @@
       rawtherapee
       protonmail-desktop
       act
+      brave
     ];
   };
 }
