@@ -21,6 +21,7 @@
     imports = with self.homeModules; [
       git
       vscode
+      brave
     ];
     home.packages = with pkgs; [
       bitwarden-desktop
@@ -36,7 +37,6 @@
       rawtherapee
       protonmail-desktop
       act
-      brave
     ];
   };
 }
