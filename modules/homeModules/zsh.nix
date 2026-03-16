@@ -1,5 +1,5 @@
 { ... }: {
-  flake.homeModules.git = { pkgs, ... }: {
+  flake.homeModules.zsh = { pkgs, ... }: {
     programs.zsh = {
       enable = true;
       autocd = true;
