@@ -14,7 +14,7 @@
         gd = "git diff";
         ga = "git add .";
         gc = "git commit - m";
-        gp = "git push"
+        gp = "git push";
       };
 
       initContent = ''
