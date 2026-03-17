@@ -21,6 +21,9 @@
     imports = with self.homeModules; [
       git
       vscode
+      brave
+      direnv
+      zsh
     ];
     home.packages = with pkgs; [
       bitwarden-desktop
