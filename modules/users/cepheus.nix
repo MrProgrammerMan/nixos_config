@@ -25,6 +25,7 @@
       direnv
       zsh
       ssh
+      eduvpn
     ];
     home.packages = with pkgs; [
       bitwarden-desktop
