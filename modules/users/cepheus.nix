@@ -24,6 +24,7 @@
       brave
       direnv
       zsh
+      ssh
     ];
     home.packages = with pkgs; [
       bitwarden-desktop
