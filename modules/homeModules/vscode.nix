@@ -10,7 +10,7 @@
         redhat.java
         anweber.vscode-httpyac
         theangryepicbanana.language-pascal
-        robocorp.robotframework-lsp
+        myriad-dreamin.tinymist
       ];
     };
   };
