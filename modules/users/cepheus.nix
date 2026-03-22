@@ -3,7 +3,7 @@
     modules = [ self.homeModules.cepheus ];
   };
 
-  flake.nixosModules.cepheus =  { config, ... }: {
+  flake.nixosModules.cepheus =  { config, pkgs, ... }: {
     users.groups.nixos-config = {};
     users.users.cepheus = {
       isNormalUser = true;
