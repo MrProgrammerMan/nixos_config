@@ -18,6 +18,7 @@
       };
 
       initContent = ''
+        PROMPT='%~ %# '
         eval "$(direnv hook zsh)"
       '';
     };
