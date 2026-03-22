@@ -6,6 +6,7 @@
       docker
       gaming
       hyprland
+      shell
       shellAliases
       systemd
       udev

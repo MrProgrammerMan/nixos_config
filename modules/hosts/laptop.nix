@@ -5,6 +5,7 @@
       starter
       docker
       hyprland
+      shell
       shellAliases
       systemd
       udev
