@@ -9,6 +9,12 @@
           user = "group73";
           identityFile = "~/.ssh/s73";
         };
+        "s44" = {
+          hostname = "intel3.vlab.cs.oslomet.no";
+          user = "s44";
+          identityFile = "~/.ssh/id_ed25519";
+          port = 5044;
+        };
       };
     };
   };
