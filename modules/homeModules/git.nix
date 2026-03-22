@@ -10,7 +10,7 @@
       settings = {
         user = {
           name = "MrProgrammerMan";
-          email = "jonas.baugerud@proton.me";
+          email = "69722297+MrProgrammerMan@users.noreply.github.com";
         };
       };
     };
