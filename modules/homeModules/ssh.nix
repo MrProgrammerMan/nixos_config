@@ -2,6 +2,7 @@
   flake.homeModules.ssh = { pkgs, ... }: {
     programs.ssh = {
       enable = true;
+      addKeysToAgent = "yes";
       matchBlocks."*".addKeysToAgent = "yes";
       matchBlocks = {
         "os73" = {
