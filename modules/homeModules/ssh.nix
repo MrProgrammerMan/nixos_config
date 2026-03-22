@@ -2,8 +2,20 @@
   flake.homeModules.ssh = { pkgs, ... }: {
     programs.ssh = {
       enable = true;
-      matchBlocks."*".addKeysToAgent = "yes";
+      enableDefaultConfig = false;
       matchBlocks = {
+        "*" = {
+          addKeysToAgent = "yes";
+          forwardAgent = false;
+          compression = false;
+          serverAliveInterval = 0;
+          serverAliveCountMax = 3;
+          hashKnownHosts = false;
+          userKnownHostsFile = "~/.ssh/known_hosts";
+          controlMaster = "auto";
+          controlPath = "~/.ssh/master-%r@%n:%p";
+          controlPersist = "no";
+        };
         "os73" = {
           hostname = "os73.vlab.cs.oslomet.no";
           user = "group73";
