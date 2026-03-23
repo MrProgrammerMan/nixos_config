@@ -8,6 +8,7 @@
       shell
       shellAliases
       systemd
+      sops
       udev
       homeManager
       # Users

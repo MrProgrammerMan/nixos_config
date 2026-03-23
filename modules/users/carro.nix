@@ -4,6 +4,9 @@
   };
 
   flake.nixosModules.carro = { config, ... }: {
+    imports = [
+      inputs.home-manager.nixosModules.home-manager
+    ];
     users.users.carro = {
       isNormalUser = true;
       description = "Caroline";

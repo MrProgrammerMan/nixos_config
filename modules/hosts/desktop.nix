@@ -8,6 +8,7 @@
       hyprland
       shell
       shellAliases
+      sops
       systemd
       udev
       homeManager

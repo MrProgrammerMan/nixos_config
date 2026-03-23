@@ -4,6 +4,10 @@
   };
 
   flake.nixosModules.cepheus =  { config, pkgs, ... }: {
+    imports = with self.nixosModules; [
+      inputs.home-manager.nixosModules.home-manager
+      sops
+    ];
     users.groups.nixos-config = {};
     users.users.cepheus = {
       isNormalUser = true;
