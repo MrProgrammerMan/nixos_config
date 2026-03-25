@@ -31,7 +31,6 @@
       zsh
       ssh
       eduvpn
-      mtpaint
     ];
     home.packages = with pkgs; [
       bitwarden-desktop
@@ -47,6 +46,7 @@
       rawtherapee
       protonmail-desktop
       act
+      mtpaint
     ];
   };
 }
