@@ -18,6 +18,8 @@
           "rust-analyzer.procMacro.ignored" = {
             "leptos_macro" = [ "server" ];
           };
+          "editor.inlineSuggest.enabled" = false;
+          "github.copilot.editor.enableAutoCompletions" = false;
         };
       };
     };
