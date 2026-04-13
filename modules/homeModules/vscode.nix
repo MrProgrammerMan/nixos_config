@@ -12,6 +12,7 @@
           anweber.vscode-httpyac
           theangryepicbanana.language-pascal
           myriad-dreamin.tinymist
+          haskell.haskell
         ];
         userSettings = {
           "rust-analyzer.cargo.features" = "all";
