@@ -2,7 +2,7 @@
   flake.homeModules.vscode = { pkgs, ... }: {
     programs.vscode = {
       enable = true;
-      package = pkgs.vscode-fhs;
+      mutableExtensionsDir = false;
       profiles.default ={
         extensions = with pkgs.vscode-extensions; [
           rust-lang.rust-analyzer
@@ -13,6 +13,7 @@
           theangryepicbanana.language-pascal
           myriad-dreamin.tinymist
           haskell.haskell
+          anweber.vscode-httpyac
         ];
         userSettings = {
           "rust-analyzer.cargo.features" = "all";

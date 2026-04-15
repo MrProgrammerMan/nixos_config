@@ -13,8 +13,10 @@
       shell = pkgs.zsh;
     };
     home-manager.backupFileExtension = "backup";
-    home-manager.users.cepheus = self.homeModules.cepheus //
-    { home.stateVersion = config.system.stateVersion; };
+    home-manager.users.cepheus = {
+      imports = [ self.homeModules.cepheus ];
+      home.stateVersion = config.system.stateVersion;
+    };
   };
 
   flake.homeModules.cepheus = { pkgs, config, ... }: {
