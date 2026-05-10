@@ -13,7 +13,6 @@
         gs = "git status";
         gd = "git diff";
         ga = "git add .";
-        gc = "git commit - m";
         gp = "git push";
       };
 

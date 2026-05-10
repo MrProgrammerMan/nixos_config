@@ -8,7 +8,7 @@
     users.users.cepheus = {
       isNormalUser = true;
       description = "Jonas";
-      extraGroups = [ "networkmanager" "wheel" "input" "abdusers" "kvm" "nixos-config" "vboxusers" "docker" ];
+      extraGroups = [ "networkmanager" "wheel" "input" "abdusers" "kvm" "nixos-config" "docker" ];
       hashedPassword = "$6$FcB9ictE6iKsk9AO$71mmUjZ4WW9X58.bhF1jUatvGce8vscNxvFJfRV5WXyIz0Z6mROsEiqVSQ2alJq1KhTW5fuYSIALuXW8y4rzZ1";
       shell = pkgs.zsh;
     };
@@ -29,7 +29,6 @@
       direnv
       zsh
       ssh
-      eduvpn
     ];
     home.packages = with pkgs; [
       bitwarden-desktop
@@ -37,14 +36,11 @@
       gimp
       inkscape
       thunderbird
-      spotify
-      zettlr
       signal-desktop
-      reaper
       vial
-      rawtherapee
       protonmail-desktop
-      act
+      eduvpn-client
+      wireshark
     ];
   };
 }
