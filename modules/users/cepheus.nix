@@ -29,7 +29,6 @@
       direnv
       zsh
       ssh
-      gns3-server
     ];
     home.packages = with pkgs; [
       bitwarden-desktop
