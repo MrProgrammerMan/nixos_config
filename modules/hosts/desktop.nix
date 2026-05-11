@@ -5,6 +5,7 @@
       starter
       docker
       gaming
+      gns3-server
       hyprland
       shell
       shellAliases
