@@ -42,6 +42,7 @@
       eduvpn-client
       wireshark
       gns3-gui
+      noisetorch
     ];
   };
 }
