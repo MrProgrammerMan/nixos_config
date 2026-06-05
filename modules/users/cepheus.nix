@@ -43,6 +43,7 @@
       wireshark
       gns3-gui
       noisetorch
+      github-cli
     ];
   };
 }
