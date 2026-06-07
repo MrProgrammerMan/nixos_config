@@ -13,6 +13,7 @@
           theangryepicbanana.language-pascal
           myriad-dreamin.tinymist
           haskell.haskell
+          justusadam.language-haskell
           anweber.vscode-httpyac
         ];
         userSettings = {
