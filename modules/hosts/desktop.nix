@@ -6,6 +6,7 @@
       docker
       gaming
       gns3-server
+      noisetorch
       hyprland
       shell
       shellAliases
