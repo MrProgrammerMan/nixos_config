@@ -44,6 +44,7 @@
       gns3-gui
       github-cli
       prismlauncher
+      bruno
     ];
   };
 }
