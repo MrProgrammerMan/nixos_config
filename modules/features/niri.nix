@@ -14,9 +14,8 @@
           "Mod+Return".spawn = [ (lib.getExe pkgs.kitty) ];
 
           "Mod+Q".close-window = _: { };
-          "Mod+F".maximize-column = _: { };
-          "Mod+G".fullscreen-window = _: { };
-          "Mod+Shift+F".toggle-window-floating = _: { };
+          "Mod+M".maximize-column = _: { };
+          "Mod+F".fullscreen-window = _: { };
           "Mod+C".center-column = _: { };
 
           "Mod+H".focus-column-left = _: { };
@@ -65,10 +64,10 @@
           "Mod+Ctrl+J".set-window-height = "-5%";
           "Mod+Ctrl+K".set-window-height = "+5%";
 
-          "Mod+WheelScrollDown".focus-column-left = _: { };
-          "Mod+WheelScrollUp".focus-column-right = _: { };
-          "Mod+Ctrl+WheelScrollDown".focus-workspace-down = _: { };
-          "Mod+Ctrl+WheelScrollUp".focus-workspace-up = _: { };
+          "Mod+WheelScrollLeft".focus-column-left = _: { };
+          "Mod+WheelScrollRight".focus-column-right = _: { };
+          "Mod+WheelScrollDown".focus-workspace-down = _: { };
+          "Mod+WheelScrollUp".focus-workspace-up = _: { };
 
           "Mod+Ctrl+S".spawn-sh = ''${lib.getExe pkgs.grim} -l 0 - | ${pkgs.wl-clipboard}/bin/wl-copy'';
 
