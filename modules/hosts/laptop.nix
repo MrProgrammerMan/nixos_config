@@ -4,7 +4,7 @@
       laptop
       starter
       docker
-      hyprland
+      security
       shell
       shellAliases
       systemd
@@ -13,6 +13,7 @@
       # Users
       cepheus
       carro
+      niri
     ];
   };
 

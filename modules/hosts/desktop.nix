@@ -7,7 +7,7 @@
       gaming
       gns3-server
       noisetorch
-      hyprland
+      security
       shell
       shellAliases
       systemd

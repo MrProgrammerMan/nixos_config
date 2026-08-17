@@ -15,6 +15,7 @@
           haskell.haskell
           justusadam.language-haskell
           anweber.vscode-httpyac
+          github.copilot-chat
         ];
         userSettings = {
           "rust-analyzer.cargo.features" = "all";

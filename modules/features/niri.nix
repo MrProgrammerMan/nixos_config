@@ -1,16 +1,51 @@
-{ self, self', inputs, ... }: {
-  perSystem = { pkgs, lib, ... }: {
+{ self, inputs, ... }: {
+  flake.nixosModules.niri = { pkgs, lib, ... }: {
+    programs.niri = {
+      enable = true;
+      package = self.packages.${pkgs.stdenv.hostPlatform.system}.myNiri;
+    };
+  };
+
+  perSystem = { pkgs, lib, self', ... }: {
     packages.myNiri = inputs.wrapper-modules.wrappers.niri.wrap {
       inherit pkgs;
 
       settings = {
-        xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
+        spawn-at-startup = [
+          [ (lib.getExe self'.packages.myNoctalia) ]
+          [ "gnome-keyring-daemon" "--start" "--components=secrets,pkcs11,ssh" ]
+          [ "/run/current-system/sw/libexec/polkit-gnome-authentication-agent-1" ]
+          [ "nm-applet" ]
+        ];
 
-        input.keyboard.xkb.layout = "no,nb";
+        cursor = {
+          xcursor-theme = "Bibata-Modern-Ice";
+          xcursor-size = 24;
+        };
+
+        xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
+        
+        extraConfig = ''
+          input {
+              keyboard {
+                  xkb {
+                      layout "no"
+                  }
+              }
+              touchpad {
+                  tap
+                  dwt
+                  drag true
+                  natural-scroll
+                  click-method "clickfinger"
+              }
+          }
+        '';
 
         layout.gaps = 5;
 
         binds = {
+          "Mod+Space".spawn-sh = "${lib.getExe self'.packages.myNoctalia} msg panel-toggle launcher";
           "Mod+Return".spawn = [ (lib.getExe pkgs.kitty) ];
 
           "Mod+Q".close-window = _: { };
