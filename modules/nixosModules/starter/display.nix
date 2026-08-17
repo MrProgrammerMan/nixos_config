@@ -1,17 +1,19 @@
 { self, ... }: {
   flake.nixosModules.display = { lib, pkgs, ... }: {
-    # services.greetd = {
-    #   enable = true;
+    services.greetd = {
+      enable = true;
 
-    #   settings = {
-    #     default_session = {
-    #       command = "${self.packages.${pkgs.stdenv.hostPlatform.system}.myNiri}/bin/niri-session";
-    #       user = "cephus";
-    #     };
-    #   };
-    # };
+      settings = {
+        default_session = {
+          command = "${lib.getExe pkgs.cage} -s -- ${lib.getExe pkgs.greetd.regreet}";
+          user = "greeter";
+        };
+      };
+    };
 
-    services.displayManager.gdm.enable = true;
+    services.accounts-daemon = {
+      enable = true;
+    };
 
     services.xserver.xkb = {
       layout = "no";
