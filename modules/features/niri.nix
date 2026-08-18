@@ -6,7 +6,7 @@
     };
   };
 
-  perSystem = { pkgs, lib, self', ... }: {
+  perSystem = { pkgs, lib, self', config, ... }: {
     packages.myNiri = inputs.wrapper-modules.wrappers.niri.wrap {
       inherit pkgs;
 
@@ -45,7 +45,7 @@
         layout.gaps = 5;
 
         binds = {
-          "Mod+Space".spawn-sh = "${lib.getExe self'.packages.myNoctalia} msg panel-toggle launcher";
+          "Mod+Space".spawn-sh = "${lib.getExe self'.packages.myNoctalia} ipc call launcher toggle";
           "Mod+Return".spawn = [ (lib.getExe pkgs.kitty) ];
 
           "Mod+Q".close-window = _: { };

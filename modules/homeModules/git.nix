@@ -1,7 +1,8 @@
 { ... }: {
-  flake.homeModules.git = { ... }: {
+  flake.homeModules.git = { pkgs, ... }: {
     programs.git = {
       enable = true;
+      package = pkgs.git.override { withLibsecret = true; };
       settings = {
         user = {
           name = "MrProgrammerMan";
@@ -15,6 +16,7 @@
             allowedSignersFile = "~/.ssh/allowed_signers";
           };
         };
+        credential.helper = "libsecret";
       };
       signing = {
         format = "ssh";

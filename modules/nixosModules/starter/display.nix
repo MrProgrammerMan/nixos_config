@@ -1,18 +1,32 @@
-{ self, ... }: {
+{ self, inputs, ... }: {
   flake.nixosModules.display = { lib, pkgs, ... }: {
-    services.greetd = {
-      enable = true;
+    imports = [
+      inputs.noctalia-greeter.nixosModules.default
+      inputs.noctalia.nixosModules.default
+    ];
 
-      settings = {
-        default_session = {
-          command = "${lib.getExe pkgs.cage} -s -- ${lib.getExe pkgs.greetd.regreet}";
-          user = "greeter";
-        };
-      };
+    programs.noctalia = {
+      enable = true;
+      package = self.packages.${pkgs.stdenv.hostPlatform.system}.myNoctalia;
     };
 
-    services.accounts-daemon = {
+    programs.noctalia-greeter = {
       enable = true;
+
+      # Optional configuration
+      greeter-args = "";
+      # Full declarative greeter.toml (overwritten on each activation).
+      # See examples/greeter.toml for every key (appearance.palette, output, …).
+      settings = {
+        cursor = {
+          theme = "Bibata-Modern-Ice";
+          size = 24;
+          path = "${pkgs.bibata-cursors}/share/icons";
+        };
+        keyboard = {
+          layout = "us";
+        };
+      };
     };
 
     services.xserver.xkb = {
