@@ -26,6 +26,7 @@
         keyboard = {
           layout = "us";
         };
+        user.default = "cepheus";
       };
     };
 

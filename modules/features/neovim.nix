@@ -29,6 +29,7 @@
 
                   nix.enable = true;
                   rust.enable = true;
+                  haskell.enable = true;
                 };
               };
             }
