@@ -1,10 +1,9 @@
 { ... }: {
   flake.homeModules.ssh = { pkgs, ... }: {
     programs.ssh = {
-      addKeysToAgent = "yes";
       enable = true;
       enableDefaultConfig = false;
-      matchBlocks = {
+      settings = {
         "*" = {
           addKeysToAgent = "yes";
           forwardAgent = false;

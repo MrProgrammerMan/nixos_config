@@ -16,6 +16,7 @@
       # Users
       cepheus
       carro
+      neovim
       niri
     ];
   };
