@@ -20,7 +20,7 @@
 
         cursor = {
           xcursor-theme = "Bibata-Modern-Ice";
-          xcursor-size = 24;
+          xcursor-size = 12;
         };
 
         xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;

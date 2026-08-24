@@ -44,6 +44,7 @@
       github-cli
       prismlauncher
       bruno
+      racket
       (pkgs.symlinkJoin {
         name = "signal-desktop";
         paths = [ pkgs.signal-desktop ];
