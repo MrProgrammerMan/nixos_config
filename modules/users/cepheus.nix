@@ -44,6 +44,9 @@
       github-cli
       prismlauncher
       bruno
+      gnome-calculator
+      nautilus
+      fuzzel
       (pkgs.symlinkJoin {
         name = "signal-desktop";
         paths = [ pkgs.signal-desktop ];
