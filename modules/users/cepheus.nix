@@ -47,6 +47,7 @@
       gnome-calculator
       nautilus
       fuzzel
+      racket
       (pkgs.symlinkJoin {
         name = "signal-desktop";
         paths = [ pkgs.signal-desktop ];
