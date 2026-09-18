@@ -18,6 +18,7 @@
           github.copilot-chat
           vscjava.vscode-gradle
           scala-lang.scala
+          redhat.java
         ];
         userSettings = {
           "rust-analyzer.cargo.features" = "all";
