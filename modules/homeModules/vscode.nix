@@ -8,7 +8,7 @@
           rust-lang.rust-analyzer
           ritwickdey.liveserver
           jnoortheen.nix-ide
-          redhat.java
+          vscjava.vscode-java-pack
           anweber.vscode-httpyac
           theangryepicbanana.language-pascal
           myriad-dreamin.tinymist
