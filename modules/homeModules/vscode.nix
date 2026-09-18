@@ -16,6 +16,7 @@
           justusadam.language-haskell
           anweber.vscode-httpyac
           github.copilot-chat
+          vscjava.vscode-gradle
         ];
         userSettings = {
           "rust-analyzer.cargo.features" = "all";
