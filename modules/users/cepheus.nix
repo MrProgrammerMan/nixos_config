@@ -14,6 +14,20 @@
     };
     xdg.portal.enable = true;
     xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gnome ];
+    environment.systemPackages = [
+      pkgs.gsettings-desktop-schemas   # provides the schema definitions
+    ];
+
+    programs.dconf.enable = true;     # starts the dconf user service
+
+    # Declarative dark mode (no Home Manager needed):
+    programs.dconf.profiles.user.databases = [{
+      settings = {
+        "org/gnome/desktop/interface" = {
+          color-scheme = "prefer-dark";
+        };
+      };
+    }];
     home-manager.backupFileExtension = "backup";
     home-manager.users.cepheus = {
       imports = [ self.homeModules.cepheus ];
