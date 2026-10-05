@@ -13,21 +13,13 @@
       shell = pkgs.zsh;
     };
     xdg.portal.enable = true;
-    xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gnome ];
+    xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    xdg.portal.config.common.default = "gtk";
+
     environment.systemPackages = [
-      pkgs.gsettings-desktop-schemas   # provides the schema definitions
+      pkgs.gsettings-desktop-schemas
     ];
 
-    programs.dconf.enable = true;     # starts the dconf user service
-
-    # Declarative dark mode (no Home Manager needed):
-    programs.dconf.profiles.user.databases = [{
-      settings = {
-        "org/gnome/desktop/interface" = {
-          color-scheme = "prefer-dark";
-        };
-      };
-    }];
     home-manager.backupFileExtension = "backup";
     home-manager.users.cepheus = {
       imports = [ self.homeModules.cepheus ];
@@ -74,9 +66,24 @@
         '';
       })
     ];
-    dconf = {
+    gtk = {
       enable = true;
-      settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
+      theme = {
+        name = "Adwaita-dark";
+        package = pkgs.gnome-themes-extra;
+      };
+      gtk3.extraConfig = {
+        gtk-application-prefer-dark-theme = 1;
+      };
+      gtk4 = {
+        extraConfig = {
+          gtk-application-prefer-dark-theme = 1;
+        };
+        theme = config.gtk.theme;
+      };
+    };
+    home.sessionVariables = {
+      GTK_THEME = "Adwaita-dark";
     };
   };
 }
