@@ -12,6 +12,12 @@
       hashedPassword = "$6$FcB9ictE6iKsk9AO$71mmUjZ4WW9X58.bhF1jUatvGce8vscNxvFJfRV5WXyIz0Z6mROsEiqVSQ2alJq1KhTW5fuYSIALuXW8y4rzZ1";
       shell = pkgs.zsh;
     };
+    xdg.portal.enable = true;
+    xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gnome ];
+    environment.etc."xdg/dconf/db.local.d/00-dark-mode".text = ''
+      [org/gnome/desktop/interface]
+      color-scheme='prefer-dark'
+    '';
     home-manager.backupFileExtension = "backup";
     home-manager.users.cepheus = {
       imports = [ self.homeModules.cepheus ];
