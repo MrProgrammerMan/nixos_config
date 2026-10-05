@@ -47,6 +47,10 @@
         binds = {
           "Mod+Space".spawn-sh = "${lib.getExe self'.packages.myNoctalia} ipc call launcher toggle";
           "Mod+Return".spawn = [ (lib.getExe pkgs.kitty) ];
+          "Mod+B".spawn = [ (lib.getExe pkgs.brave) ];
+          "Mod+P".spawn = [ (lib.getExe pkgs.bitwarden-desktop) ];
+          "Mod+S".spawn = [ (lib.getExe pkgs.signal-desktop) ];
+          
 
           "Mod+Q".close-window = _: { };
           "Mod+M".maximize-column = _: { };
