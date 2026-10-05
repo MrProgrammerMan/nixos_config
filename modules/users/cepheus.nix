@@ -14,10 +14,6 @@
     };
     xdg.portal.enable = true;
     xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gnome ];
-    environment.etc."xdg/dconf/db.local.d/00-dark-mode".text = ''
-      [org/gnome/desktop/interface]
-      color-scheme='prefer-dark'
-    '';
     home-manager.backupFileExtension = "backup";
     home-manager.users.cepheus = {
       imports = [ self.homeModules.cepheus ];
@@ -64,5 +60,9 @@
         '';
       })
     ];
+    dconf = {
+      enable = true;
+      settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
+    };
   };
 }
