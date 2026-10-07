@@ -20,6 +20,8 @@
       pkgs.gsettings-desktop-schemas
     ];
 
+    programs.dconf.enable = true;
+
     home-manager.backupFileExtension = "backup";
     home-manager.users.cepheus = {
       imports = [ self.homeModules.cepheus ];
@@ -66,7 +68,6 @@
         '';
       })
     ];
-    programs.dconf.enable = true;
     dconf.settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
     gtk = {
       enable = true;
