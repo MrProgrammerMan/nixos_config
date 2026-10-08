@@ -49,7 +49,15 @@
           "Mod+Return".spawn = [ (lib.getExe pkgs.kitty) ];
           "Mod+B".spawn = [ (lib.getExe pkgs.brave) ];
           "Mod+P".spawn = [ (lib.getExe pkgs.bitwarden-desktop) ];
-          "Mod+S".spawn = [ (lib.getExe pkgs.signal-desktop) ];
+          "Mod+S".spawn = [ (lib.getExe (pkgs.symlinkJoin {
+        name = "signal-desktop";
+        paths = [ pkgs.signal-desktop ];
+        buildInputs = [ pkgs.makeWrapper ];
+        postBuild = ''
+          wrapProgram $out/bin/signal-desktop \
+            --add-flags '--password-store="gnome-libsecret"'
+        '';
+      })) ];
           
 
           "Mod+Q".close-window = _: { };
