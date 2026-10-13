@@ -58,7 +58,7 @@
                 --add-flags '--password-store="gnome-libsecret"'
             '';
           })) ];
-          
+          "Mod+Z".spawn-sh = "${lib.getExe self'.packages.myNoctalia} ipc call lockScreen lock";
 
           "Mod+Q".close-window = _: { };
           "Mod+M".maximize-column = _: { };
