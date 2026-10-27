@@ -58,7 +58,6 @@
       nautilus
       fuzzel
       racket
-      spotify
       (pkgs.symlinkJoin {
         name = "signal-desktop";
         paths = [ pkgs.signal-desktop ];
