@@ -22,6 +22,7 @@
           redhat.java
           elmtooling.elm-ls-vscode
           hbenl.vscode-test-explorer
+          ms-vscode.test-adapter-converter
         ];
         userSettings = {
           "haskell.manageHLS" = "PATH";
