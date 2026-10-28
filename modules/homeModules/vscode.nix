@@ -20,8 +20,10 @@
           vscjava.vscode-gradle
           scala-lang.scala
           redhat.java
+          elmtooling.elm-ls-vscode
         ];
         userSettings = {
+          "haskell.manageHLS" = "PATH";
           "rust-analyzer.cargo.features" = "all";
           "rust-analyzer.procMacro.ignored" = {
             "leptos_macro" = [ "server" ];
