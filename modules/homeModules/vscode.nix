@@ -21,6 +21,7 @@
           scala-lang.scala
           redhat.java
           elmtooling.elm-ls-vscode
+          hbenl.vscode-test-explorer
         ];
         userSettings = {
           "haskell.manageHLS" = "PATH";
