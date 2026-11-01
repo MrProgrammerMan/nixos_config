@@ -51,6 +51,7 @@
           "Mod+P".spawn = [ (lib.getExe pkgs.bitwarden-desktop) ];
           "Mod+S".spawn = [ (lib.getExe (pkgs.symlinkJoin {
             name = "signal-desktop";
+            meta.mainProgram = "signal-desktop";
             paths = [ pkgs.signal-desktop ];
             buildInputs = [ pkgs.makeWrapper ];
             postBuild = ''

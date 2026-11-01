@@ -1,46 +1,96 @@
-{ inputs, self, ... }: {
-  flake.nixosModules.neovim = { pkgs, lib, ... }: {
-    programs.neovim = {
-      enable = true;
-      package = self.packages.${pkgs.stdenv.hostPlatform.system}.myNeovim;
+{ inputs, self, ... }:
+{
+  flake.nixosModules.neovim =
+    { pkgs, lib, ... }:
+    {
+      programs.neovim = {
+        enable = true;
+        package = self.packages.${pkgs.stdenv.hostPlatform.system}.myNeovim;
+      };
     };
-  };
 
-  perSystem = { self', pkgs, lib, ... }: {
-    packages.myNeovim =
-      ((inputs.nvf.lib.neovimConfiguration {
-        inherit pkgs;
-        modules = [
-          (
-            { pkgs, ... }: {
-              config.vim = {
-                theme = {
-                  enable = true;
-                  name = "gruvbox";
-                  style = "dark";
-                };
+  perSystem =
+    { self', pkgs, lib, ... }:
+    {
+      packages.myNeovim =
+        (
+          (inputs.nvf.lib.neovimConfiguration {
+            inherit pkgs;
+            modules = [
+              (
+                { pkgs, ... }:
+                {
+                  config.vim = {
+                    autocomplete.nvim-cmp.enable = true;
+                    autopairs.nvim-autopairs.enable = true;
 
-                statusline.lualine.enable = true;
-                telescope.enable = true;
-                autocomplete.nvim-cmp.enable = true;
+                    binds = {
+                      cheatsheet.enable = true;
+                      whichKey.enable = true;
+                    };
 
-                languages = {
-                  enableTreesitter = true;
+                    clipboard.enable = true;
+                    comments.comment-nvim.enable = true; # gcc / gc
 
-                  nix.enable = true;
-                  rust.enable = true;
-                  haskell.enable = true;
-                };
-              };
-            }
-          )
-        ];
-      })
-      .neovim).overrideAttrs (old: { # Why on earth is license and platforms missing????? Anyhow, this is required
-        meta = old.meta // {
-          license = lib.licenses.mit;
-          platforms = old.meta.platforms or lib.platforms.unix;
-        };
-      });
-  };
+                    git = {
+                      enable = true;
+                      gitsigns.enable = true;
+                    };
+
+                    languages = {
+                      enableExtraDiagnostics = true;
+                      enableFormat = true;
+                      enableTreesitter = true;
+
+                      elm.enable = true;
+                      haskell.enable = true;
+                      java.enable = true;
+                      markdown.enable = true;
+                      nix.enable = true;
+                      python.enable = true;
+                      rust.enable = true;
+                      zsh.enable = true;
+                    };
+
+                    lsp = {
+                      enable = true;
+                      formatOnSave = true;
+                      lightbulb.enable = true;
+                      lspkind.enable = true;
+                      trouble.enable = true;
+                    };
+
+                    snippets.luasnip.enable = true;
+                    statusline.lualine.enable = true;
+                    telescope.enable = true;
+
+                    theme = {
+                      enable = true;
+                      name = "oxocarbon";
+                      style = "dark";
+                    };
+
+                    treesitter = {
+                      enable = true;
+                      context.enable = true;
+                    };
+
+                    utility = {
+                      motion.flash-nvim.enable = true;
+                      surround.enable = true; # cs"' etc.
+                    };
+                  };
+                }
+              )
+            ];
+          }).neovim
+        ).overrideAttrs
+          (old: {
+            # Why on earth is license and platforms missing????? Anyhow, this is required
+            meta = old.meta // {
+              license = lib.licenses.mit;
+              platforms = old.meta.platforms or lib.platforms.unix;
+            };
+          });
+    };
 }

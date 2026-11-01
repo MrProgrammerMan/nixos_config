@@ -10,7 +10,7 @@
       package = self.packages.${pkgs.stdenv.hostPlatform.system}.myNoctalia;
     };
 
-    programs.noctalia-greeter = {
+    services.displayManager.noctalia-greeter = {
       enable = true;
 
       # Optional configuration
