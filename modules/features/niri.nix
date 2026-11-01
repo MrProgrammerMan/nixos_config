@@ -63,7 +63,7 @@
           ];
 
           focus-ring = {
-            width = 2;
+            width = 1;
             active-color = "#7fc8ff";
             inactive-color = "#505050";
             urgent-color = "#9b0000";
