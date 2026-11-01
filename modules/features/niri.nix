@@ -21,6 +21,7 @@
         cursor = {
           xcursor-theme = "Bibata-Modern-Ice";
           xcursor-size = 12;
+          hide-after-inactive-ms = 3000;
         };
 
         xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
@@ -42,7 +43,32 @@
           }
         '';
 
-        layout.gaps = 5;
+        layout = {
+          gaps = 5;
+
+          empty-workspace-above-first = _: { };
+
+          preset-column-widths = [
+            { proportion = 1.0 / 3.0; }
+            { proportion = 1.0 / 2.0; }
+            { proportion = 2.0 / 3.0; }
+          ];
+
+          default-column-width = { proportion = 0.5; };
+
+          preset-window-heights = [
+            { proportion = 1.0 / 3.0; }
+            { proportion = 1.0 / 2.0; }
+            { proportion = 2.0 / 3.0; }
+          ];
+
+          focus-ring = {
+            width = 2;
+            active-color = "#7fc8ff";
+            inactive-color = "#505050";
+            urgent-color = "#9b0000";
+          };
+        };
 
         binds = {
           "Mod+Space".spawn-sh = "${lib.getExe self'.packages.myNoctalia} ipc call launcher toggle";
