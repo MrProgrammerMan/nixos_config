@@ -7,7 +7,6 @@
       };
       firewall = {
         checkReversePath = "loose";
-        allowedUDPPorts = [ 51820 ];
       };
     };
   };
