@@ -5,7 +5,6 @@
       starter
       docker
       gaming
-      gns3-server
       noisetorch
       security
       shell
