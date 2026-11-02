@@ -4,6 +4,7 @@
       enable = true;
       extensions = [
         "eimadpbcbfnmbkopoojfekhnkhdbieeh"
+        "nalejidoccmgcmjjdcioafcjbilcjmlc"
       ];
       package = pkgs.brave;
     };
