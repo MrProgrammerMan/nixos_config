@@ -3,8 +3,8 @@
     programs.chromium = {
       enable = true;
       extensions = [
-        "eimadpbcbfnmbkopoojfekhnkhdbieeh"
-        "nalejidoccmgcmjjdcioafcjbilcjmlc"
+        "eimadpbcbfnmbkopoojfekhnkhdbieeh" # Dark reader
+        "nalejidoccmgcmjjdcioafcjbilcjmlc" # Disable back swipe gesture
       ];
       package = pkgs.brave;
     };
