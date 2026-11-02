@@ -44,7 +44,7 @@
         '';
 
         layout = {
-          gaps = 5;
+          gaps = 0;
 
           empty-workspace-above-first = _: { };
 
