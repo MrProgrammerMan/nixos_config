@@ -79,6 +79,28 @@
                       motion.flash-nvim.enable = true;
                       surround.enable = true; # cs"' etc.
                     };
+
+                    options = {
+                      expandtab = true;
+                      tabstop = 4;
+                      softtabstop = 4;
+                      shiftwidth = 4;
+                    };
+
+                    autocmds = [
+                      {
+                        event = [ "FileType" ];
+                        pattern = [ "elm" ];
+                        desc = "Elm: 4 spaces, as elm-format expects";
+                        command = "setlocal expandtab tabstop=4 softtabstop=4 shiftwidth=4";
+                      }
+                      {
+                        event = [ "FileType" ];
+                        pattern = [ "nix" ];
+                        desc = "Nix: 2 spaces";
+                        command = "setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2";
+                      }
+                    ];
                   };
                 }
               )
