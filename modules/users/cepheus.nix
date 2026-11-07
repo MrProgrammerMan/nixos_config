@@ -41,6 +41,7 @@
       ssh
     ];
     home.packages = with pkgs; [
+      inputs.claude-desktop.packages.${pkgs.stdenv.hostPlatform.system}.claude-desktop
       bitwarden-desktop
       discord
       gimp
